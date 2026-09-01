@@ -1,0 +1,93 @@
+[
+  {
+    "id": "role-01",
+    "type": "mc",
+    "question": "Who performs the final clinical check and sign-off on a dispensed prescription?",
+    "options": ["The pharmacy technician", "The pharmacist", "The dispensary assistant", "The patient"],
+    "answer": "The pharmacist",
+    "explanation": "The pharmacist is the clinical expert and legally accountable professional. Technicians may perform in-process accuracy checks, but the pharmacist always performs the final clinical check before the medicine reaches the patient."
+  },
+  {
+    "id": "role-02",
+    "type": "typed",
+    "question": "Name the four in-process accuracy checks a technician performs before the pharmacist's final check (one word each covers the theme, but describe the group).",
+    "answer": "assembling prescriptions, labelling and packaging, preparing medicines, accuracy checks",
+    "explanation": "A technician's core dispensing duties are: assembling prescriptions (reading/interpreting), labelling and packaging clearly, preparing medicines (including extemporaneous items), and performing in-process accuracy checks before the pharmacist's final sign-off."
+  },
+  {
+    "id": "role-03",
+    "type": "mc",
+    "question": "Which of these is NOT one of a technician's core stock control duties?",
+    "options": ["Ordering", "Receiving stock against invoices", "Prescribing repeat medication", "Stock rotation and expiry checks"],
+    "answer": "Prescribing repeat medication",
+    "explanation": "Stock control covers ordering, receiving deliveries against invoices, correct storage (including CDs and refrigeration), and stock rotation/expiry checks. Prescribing is a clinical, pharmacist-only (or specially authorised prescriber) function."
+  },
+  {
+    "id": "role-04",
+    "type": "typed",
+    "question": "What EU/national law sets the strict rules for handling patient data in a pharmacy?",
+    "answer": "GDPR",
+    "explanation": "The General Data Protection Regulation (GDPR), alongside the Data Protection Act 2018, governs how patient data must be kept secure and confidential in Ireland.",
+    "hook": "GDPR = General Data Protection Regulation — think 'guard the data properly, respectfully.'"
+  },
+  {
+    "id": "role-05",
+    "type": "mc",
+    "question": "In Ireland, pharmacy technicians are currently:",
+    "options": ["A statutorily regulated profession with a mandatory PSI register", "NOT a statutorily regulated profession", "Regulated by the HPRA", "Required to hold a personal prescribing licence"],
+    "answer": "NOT a statutorily regulated profession",
+    "explanation": "There is no mandatory PSI register or single legally-mandated education/conduct standard for technicians. This creates the 'accountability gap' \u2014 the supervising pharmacist retains full legal and professional responsibility for all dispensary work, including tasks carried out by technicians."
+  },
+  {
+    "id": "role-06",
+    "type": "typed",
+    "question": "What is the name for the gap in accountability that exists because technicians aren't statutorily regulated?",
+    "answer": "the accountability gap",
+    "explanation": "Because technicians have no statutory register or code of conduct, the supervising pharmacist retains full legal and professional responsibility for all work carried out in the dispensary, including tasks performed by technicians."
+  },
+  {
+    "id": "role-07",
+    "type": "mc",
+    "question": "Which body maintains the official register of pharmacists and pharmacy businesses in Ireland?",
+    "options": ["HPRA", "HSE", "PSI", "PCRS"],
+    "answer": "PSI",
+    "explanation": "The Pharmaceutical Society of Ireland (PSI) maintains the statutory registers, sets standards, inspects pharmacies, manages complaints, and oversees CPD."
+  },
+  {
+    "id": "role-08",
+    "type": "typed",
+    "question": "Assembling, labelling, preparing and checking medicines makes up which part of a technician's core mission?",
+    "answer": "dispensing and medication management",
+    "explanation": "This is described as the 'technical heart' of the technician role \u2014 accuracy at every one of these steps is essential for patient safety."
+  },
+  {
+    "id": "role-09",
+    "type": "mc",
+    "question": "Which development is expected to most change dispensary workflow in the near future?",
+    "options": ["Return to paper-only prescriptions", "The rise of eHealth / electronic prescriptions", "Removal of the pharmacist's role", "Abolition of stock control"],
+    "answer": "The rise of eHealth / electronic prescriptions",
+    "explanation": "The shift towards electronic prescriptions and digital health records is streamlining workflows and will require new technical skills from technicians."
+  },
+  {
+    "id": "role-10",
+    "type": "typed",
+    "question": "What is the maximum split (as a %) between continuous assessment and end-of-term exam typically used for this module?",
+    "answer": "50/50",
+    "explanation": "Assessment is typically split 50% continuous assessment and 50% end-of-term examination."
+  },
+  {
+    "id": "role-11",
+    "type": "mc",
+    "question": "Who is typically the FIRST and LAST person a patient interacts with in the pharmacy?",
+    "options": ["The superintendent pharmacist", "The pharmacy technician", "The HPRA inspector", "The GP"],
+    "answer": "The pharmacy technician",
+    "explanation": "Technicians are often the first point of contact (taking in prescriptions, greeting patients) and the last (handing over the finished medicine), making communication skills vital."
+  },
+  {
+    "id": "role-12",
+    "type": "typed",
+    "question": "Name the mandatory practical component of the Pharmacy Technician course that takes place in a community or hospital pharmacy.",
+    "answer": "work placement",
+    "explanation": "Work placement lets students apply classroom knowledge in a real dispensary, developing practical dispensing and communication skills as part of a professional team."
+  }
+]

@@ -1,0 +1,69 @@
+[
+  {
+    "id": "comp-01",
+    "type": "typed",
+    "question": "List all 8 mandatory label particulars for a dispensed medicine.",
+    "answer": "date of dispensing, name of patient, name and address of pharmacy, medicine name strength amount form, directions for use, cautionary labels, keep out of reach of children, for external use only",
+    "explanation": "1. Date of dispensing 2. Patient's name 3. Pharmacy name & address 4. Medicine (name, strength, amount, form) 5. Directions for use 6. Cautionary labels 7. 'Keep out of the reach of children' 8. 'For external use only' (if applicable)."
+  },
+  {
+    "id": "comp-02",
+    "type": "mc",
+    "question": "What is 'endorsing' a prescription?",
+    "options": ["Signing the front of a script before dispensing", "Writing on the physical prescription to create an auditable trail of what was dispensed", "Stamping the pharmacy logo on the label", "Filing the script alphabetically"],
+    "answer": "Writing on the physical prescription to create an auditable trail of what was dispensed",
+    "explanation": "Endorsing creates a clear, auditable record of exactly what has been dispensed \u2014 a legal requirement that supports patient safety and prevents fraudulent dispensing."
+  },
+  {
+    "id": "comp-03",
+    "type": "mc",
+    "question": "You dispense 'Lipitor' against a prescription for 'Atorvastatin'. What must you do?",
+    "options": ["Nothing, they're identical", "Record 'Lipitor' on the back of the script", "Contact the HPRA", "Refuse to dispense"],
+    "answer": "Record 'Lipitor' on the back of the script",
+    "explanation": "For a generic prescription, if you dispense a specific brand, you must endorse (record) that brand name on the back of the script."
+  },
+  {
+    "id": "comp-04",
+    "type": "typed",
+    "question": "What two things must you write when a repeat prescription is finished (no owings remain)?",
+    "answer": "'Dispensed' and the final date",
+    "explanation": "Clearly write or print 'Dispensed' and the final date on the prescription, then keep it for two years."
+  },
+  {
+    "id": "comp-05",
+    "type": "mc",
+    "question": "Which IPU code indicates a Schedule 2 Controlled Drug on the pharmacy computer system?",
+    "options": ["S1A", "S1B", "P", "CD2"],
+    "answer": "CD2",
+    "explanation": "CD2 in the IPU Product File indicates a Schedule 2 Controlled Drug requiring full controls (CD safe, CD Register)."
+  },
+  {
+    "id": "comp-06",
+    "type": "typed",
+    "question": "What does the computer code 'S1B' mean?",
+    "answer": "prescription only, repeatable for up to 6 or 12 months",
+    "explanation": "S1B indicates a prescription-only medicine that is repeatable for up to 6 (or now up to 12, with extension) months."
+  },
+  {
+    "id": "comp-07",
+    "type": "mc",
+    "question": "Within how many hours must a pharmacist sign the printed daily log of prescriptions (if not using a register)?",
+    "options": ["12 hours", "24 hours", "48 hours", "7 days"],
+    "answer": "24 hours",
+    "explanation": "The pharmacist must print a hard copy of the day's prescriptions and sign it within 24 hours, or use a prescription register instead."
+  },
+  {
+    "id": "comp-08",
+    "type": "typed",
+    "question": "Give two exceptions where a transaction does NOT need to be recorded in the daily log.",
+    "answer": "GMS prescriptions, controlled drugs recorded separately in the CD register, wholesale transactions with invoice retained, supply to a sampling officer",
+    "explanation": "Exceptions to the daily log requirement: GMS prescriptions; CDs (recorded in the CD Register instead); wholesale-type transactions where a copy order/invoice is kept; and supply to a sampling officer."
+  },
+  {
+    "id": "comp-09",
+    "type": "typed",
+    "question": "For a repeat prescription dispensed at a DIFFERENT pharmacy than the original, what two extra details must be recorded?",
+    "answer": "the name and address of that pharmacy, and the reference number they used",
+    "explanation": "If a repeat was originally dispensed elsewhere, you must record that pharmacy's name and address and their reference number for the original entry."
+  }
+]

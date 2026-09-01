@@ -1,0 +1,54 @@
+[
+  {
+    "id": "sop-01",
+    "type": "typed",
+    "question": "What does SOP stand for and who is it a regulatory requirement from?",
+    "answer": "Standard Operating Procedure; a PSI regulatory requirement",
+    "explanation": "SOPs are structured, written documents providing step-by-step instructions for routine pharmacy tasks. They're a PSI regulatory requirement, ensuring consistency regardless of who performs the task."
+  },
+  {
+    "id": "sop-02",
+    "type": "typed",
+    "question": "List the 7 essential components of an SOP.",
+    "answer": "title, objective, scope, responsibilities, procedure, references, version control",
+    "explanation": "Title, Objective (what it achieves), Scope (area covered), Responsibilities (who does what), Procedure (step-by-step), References (legislation/guidelines), and Version Control (author, dates, version number)."
+  },
+  {
+    "id": "sop-03",
+    "type": "mc",
+    "question": "How often should SOPs be reviewed?",
+    "options": ["Every 6 months", "Every year", "Every two years, or when a process changes", "Only when requested by PSI"],
+    "answer": "Every two years, or when a process changes",
+    "explanation": "Regular review/audit is expected every two years, or sooner if the underlying process changes, to keep the SOP relevant and compliant."
+  },
+  {
+    "id": "sop-04",
+    "type": "mc",
+    "question": "Who should ideally perform the accuracy check on an assembled prescription?",
+    "options": ["The same person who assembled it, always", "A second, competent and authorised person wherever possible", "Any staff member available", "No check is required if the pharmacist is busy"],
+    "answer": "A second, competent and authorised person wherever possible",
+    "explanation": "Self-checking is not recommended except in exceptional circumstances with safeguards in place. Wherever possible, a second person should perform the accuracy check."
+  },
+  {
+    "id": "sop-05",
+    "type": "typed",
+    "question": "During pharmaceutical assessment, name four factors a check should cover beyond legal validity.",
+    "answer": "appropriate dosage form and route, appropriateness for the patient's condition, dosage within therapeutic range, compatibility with other medication, side effects, drug interactions, contraindications",
+    "explanation": "Assessment covers: legal validity; prescribability under relevant schemes; appropriate dosage form/route; suitability for the patient's condition; dosage/duration; patient parameters (age, weight, prior meds); drug interactions; side effects/ADR risk; misuse potential; and contraindications."
+  },
+  {
+    "id": "sop-06",
+    "type": "typed",
+    "question": "Name two things that should be provided to the patient when a completed prescription is handed over, beyond the medicine itself.",
+    "answer": "appropriate information (checked for understanding), measuring spoons or oral syringes where appropriate",
+    "explanation": "On transfer to the patient: confirm the right person receives it, give appropriate information (checking understanding where possible), provide measuring devices where needed, and maintain PSI delivery standards."
+  },
+  {
+    "id": "sop-07",
+    "type": "mc",
+    "question": "Who should be involved in writing an SOP?",
+    "options": ["Only the superintendent pharmacist", "Everybody involved in the procedure", "External consultants only", "The HPRA"],
+    "answer": "Everybody involved in the procedure",
+    "explanation": "Everybody involved in a given procedure should contribute to writing its SOP, and all staff must be trained on new SOPs and sign to confirm understanding."
+  }
+]

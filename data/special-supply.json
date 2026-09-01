@@ -1,0 +1,63 @@
+[
+  {
+    "id": "sp-01",
+    "type": "mc",
+    "question": "For an emergency supply at a PATIENT's request, what is the general maximum quantity?",
+    "options": ["1 day's supply", "5 days' treatment", "14 days' treatment", "30 days' treatment"],
+    "answer": "5 days' treatment",
+    "explanation": "Generally no more than a 5-day supply, with exceptions: smallest pack of inhalers/creams, full course of liquid antibiotics, or a full cycle of oral contraceptives."
+  },
+  {
+    "id": "sp-02",
+    "type": "typed",
+    "question": "What must the label say for any emergency supply?",
+    "answer": "Emergency Supply",
+    "explanation": "The label must clearly state 'Emergency Supply' so anyone handling the medicine afterwards knows the circumstances of dispensing."
+  },
+  {
+    "id": "sp-03",
+    "type": "mc",
+    "question": "For an emergency supply at a PRESCRIBER's request, within how many hours must a valid prescription follow?",
+    "options": ["24 hours", "48 hours", "72 hours", "7 days"],
+    "answer": "72 hours",
+    "explanation": "The prescriber undertakes to provide a valid prescription within 72 hours of requesting the emergency supply."
+  },
+  {
+    "id": "sp-04",
+    "type": "mc",
+    "question": "Prescriptions from registered prescribers in other EU/EEA states are:",
+    "options": ["Never valid in Ireland", "Legally valid in Ireland, with restrictions on Schedule 2/3 CDs", "Only valid for GSL medicines", "Valid only if countersigned by an Irish GP"],
+    "answer": "Legally valid in Ireland, with restrictions on Schedule 2/3 CDs",
+    "explanation": "EU/EEA prescriptions are legally valid provided they contain the required details. However, Schedule 2 and Schedule 3 Controlled Drugs cannot be dispensed from them (Schedule 4 and 5 CDs can)."
+  },
+  {
+    "id": "sp-05",
+    "type": "typed",
+    "question": "What condition is oral Isotretinoin used to treat, and what two special dispensing limits apply?",
+    "answer": "severe acne; must be dispensed within 7 days of the prescription date, and quantity must not exceed 30 days",
+    "explanation": "Isotretinoin (severe acne treatment) has strict rules for women of childbearing potential: dispense no later than 7 days after the prescription date, and supply no more than a 30-day quantity."
+  },
+  {
+    "id": "sp-06",
+    "type": "mc",
+    "question": "What does an inverted black triangle (\u25bc) on a medicine indicate?",
+    "options": ["The medicine is discontinued", "It is subject to additional monitoring \u2014 report all suspected ADRs to the HPRA", "It is a Controlled Drug", "It requires refrigeration"],
+    "answer": "It is subject to additional monitoring \u2014 report all suspected ADRs to the HPRA",
+    "explanation": "The Black Triangle Scheme flags new medicines (generally authorised after 1 Jan 2011 with a new active substance or biologics) needing extra adverse drug reaction (ADR) reporting to the HPRA."
+  },
+  {
+    "id": "sp-07",
+    "type": "typed",
+    "question": "Name three emergency medicines pharmacists can supply to a registered organisation on a signed requisition.",
+    "answer": "Epinephrine, Glucagon, Naloxone",
+    "explanation": "Pharmacists can supply Epinephrine, Glucagon, or Naloxone (among others) to HPRA-registered organisations on presentation of a signed order from the organisation's 'accountable person'. This order must be kept for 2 years."
+  },
+  {
+    "id": "sp-08",
+    "type": "mc",
+    "question": "If a pharmacist sees a nurse/midwife prescription that seems outside their typical scope of practice, what should they do?",
+    "options": ["Refuse to dispense automatically", "Verify the prescription's validity, e.g. by contacting the prescriber or their collaborating doctor", "Dispense it anyway without question", "Contact the patient's family"],
+    "answer": "Verify the prescription's validity, e.g. by contacting the prescriber or their collaborating doctor",
+    "explanation": "The pharmacist has a professional obligation to check validity rather than automatically refuse or automatically dispense."
+  }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "id": "reim-01",
+    "type": "typed",
+    "question": "Name the four main community reimbursement schemes processed daily.",
+    "answer": "GMS, Drugs Payment Scheme, Long-Term Illness Scheme, High-Tech Arrangement",
+    "explanation": "General Medical Services (GMS/Medical Card), Drugs Payment Scheme (DPS), Long-Term Illness (LTI) Scheme, and the High-Tech Arrangement."
+  },
+  {
+    "id": "reim-02",
+    "type": "mc",
+    "question": "Under GMS, what is the prescription charge for a patient under 70?",
+    "options": ["Free", "\u20ac1.00 per item", "\u20ac1.50 per item", "\u20ac5.00 per item"],
+    "answer": "\u20ac1.50 per item",
+    "explanation": "Under 70: \u20ac1.50 per item, capped at \u20ac15/month per person or family. 70 and over: \u20ac1.00 per item, capped at \u20ac10/month."
+  },
+  {
+    "id": "reim-03",
+    "type": "typed",
+    "question": "What is the current monthly household cap under the Drugs Payment Scheme, and is it means-tested?",
+    "answer": "\u20ac80 per month, not means-tested",
+    "explanation": "The DPS caps costs at \u20ac80 per household per calendar month for approved medicines; it's open to anyone ordinarily resident in Ireland and is not means-tested. This threshold has been stable since March 2022 and remains \u20ac80 in 2026."
+  },
+  {
+    "id": "reim-04",
+    "type": "mc",
+    "question": "Since 1 June 2025, what became free of charge under the DPS?",
+    "options": ["All antibiotics", "Hormone Replacement Therapy (HRT) for menopausal symptoms", "Paracetamol", "Contraception"],
+    "answer": "Hormone Replacement Therapy (HRT) for menopausal symptoms",
+    "explanation": "Since 1 June 2025, approved HRT products are free via the DPS (no co-payment), with the HSE paying pharmacies a \u20ac5.00 dispensing fee per HRT item plus a once-off \u20ac1,000 grant to participating pharmacies."
+  },
+  {
+    "id": "reim-05",
+    "type": "typed",
+    "question": "What determines eligibility for the Long-Term Illness (LTI) Scheme, and what does the patient pay?",
+    "answer": "having one of 16 specified medical conditions; the patient pays nothing for medicines related to that condition",
+    "explanation": "LTI eligibility is based on one of 16 listed conditions (e.g. Diabetes, Epilepsy) and is not means-tested. Approved drugs for that specific condition are free; other medicines must be paid for separately, usually via DPS."
+  },
+  {
+    "id": "reim-06",
+    "type": "mc",
+    "question": "The High-Tech Arrangement is for medicines that are:",
+    "options": ["Low-cost and simple", "High-cost, specialised, prescribed by a consultant but dispensed in community pharmacy", "Only available in hospitals", "Only for veterinary use"],
+    "answer": "High-cost, specialised, prescribed by a consultant but dispensed in community pharmacy",
+    "explanation": "It lets patients access complex, consultant-prescribed treatments conveniently at their local pharmacy. Cost is covered by the patient's existing eligibility (free for Medical Card/LTI, or under the DPS \u20ac80 cap for others)."
+  },
+  {
+    "id": "reim-07",
+    "type": "typed",
+    "question": "What is the 'High-Tech Hub' and since when have longer High-Tech prescriptions been allowed?",
+    "answer": "a national electronic ordering system, increasingly mandatory for certain drugs; since 1 March 2024 prescriptions can be issued for up to 12 months",
+    "explanation": "The High-Tech Hub is a national electronic ordering system whose use is becoming mandatory for certain drugs (e.g. long-acting G-CSFs added April 2024; filgrastim/lenograstim added April 2025) \u2014 reimbursement now depends on ordering through the Hub for these drugs."
+  },
+  {
+    "id": "reim-08",
+    "type": "mc",
+    "question": "What has caused the average core dispensing fee to fall by over 25% since 2009?",
+    "options": ["Reduced medicine costs", "A 'regressive tiered' fee model where the fee per item decreases as volume increases", "New GDPR rules", "Loss of the GMS scheme"],
+    "answer": "A 'regressive tiered' fee model where the fee per item decreases as volume increases",
+    "explanation": "The core dispensing fee fell to just \u20ac4.46 in 2023 under this model, prompting the 2025 contract negotiations between the IPU, Dept. of Health, and HSE."
+  },
+  {
+    "id": "reim-09",
+    "type": "typed",
+    "question": "The IPU proposed replacing the regressive fee model with what flat-rate dispensing fee?",
+    "answer": "\u20ac6.50 per item, plus a \u20ac1.50 per-prescription administration payment",
+    "explanation": "Key IPU 2025 proposals: abolish the regressive tiered model, introduce a flat \u20ac6.50 dispensing fee per item, add a \u20ac1.50 administration payment per prescription, and restore the link to public sector pay increases."
+  },
+  {
+    "id": "reim-10",
+    "type": "mc",
+    "question": "As of early 2026, what is the current status of the Common Conditions Scheme?",
+    "options": ["Still just a future proposal with no date set", "Live and operational \u2014 pharmacists can prescribe for 8 common conditions after PSI-approved training", "Cancelled", "Limited to hospital pharmacists only"],
+    "answer": "Live and operational \u2014 pharmacists can prescribe for 8 common conditions after PSI-approved training",
+    "explanation": "UPDATE since the source lecture: this has now launched. Trained, registered pharmacists in participating pharmacies can prescribe/supply POMs for 8 conditions under approved HSE clinical protocols, following PSI Rules (S.I. No. 507/2025). Participating pharmacies had to sign up by 1 Dec 2025 and deliver the service by 31 March 2026."
+  },
+  {
+    "id": "reim-11",
+    "type": "typed",
+    "question": "List the 8 conditions covered by the Common Conditions Service.",
+    "answer": "allergic rhinitis, cold sores, conjunctivitis, impetigo, oral thrush, shingles, uncomplicated UTIs, vulvovaginal thrush",
+    "explanation": "These are the initial 8 conditions pharmacists can manage and prescribe for under the Common Conditions Service, using HSE-approved clinical protocols and formularies."
+  }
+]

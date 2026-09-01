@@ -1,0 +1,93 @@
+[
+  {
+    "id": "cd-01",
+    "type": "typed",
+    "question": "Name the two Acts and one Regulation that form the legal basis for Controlled Drugs in Ireland.",
+    "answer": "Misuse of Drugs Acts 1977 and 1984, Misuse of Drugs Regulations 2017",
+    "explanation": "The handling of Controlled Drugs is governed by the Misuse of Drugs Acts 1977 & 1984 and the Misuse of Drugs Regulations 2017."
+  },
+  {
+    "id": "cd-02",
+    "type": "mc",
+    "question": "Which Schedule is the MOST controlled in Ireland (substances not ordinarily used as medicines, e.g. raw opium)?",
+    "options": ["Schedule 1", "Schedule 2", "Schedule 3", "Schedule 5"],
+    "answer": "Schedule 1",
+    "explanation": "Schedule 1 covers substances not ordinarily used as medicines (e.g. raw opium, coca leaf, LSD, HHC) \u2014 you'll rarely handle these; they need a special licence."
+  },
+  {
+    "id": "cd-03",
+    "type": "mc",
+    "question": "Morphine, Oxycodone, Fentanyl and Methadone are examples of which Schedule?",
+    "options": ["Schedule 1", "Schedule 2", "Schedule 4 Part 1", "Schedule 5"],
+    "answer": "Schedule 2",
+    "explanation": "Schedule 2 is the most controlled schedule in day-to-day pharmacy practice: high abuse potential, valid medical use, requiring the CD safe, CD Register, and strictest prescription rules."
+  },
+  {
+    "id": "cd-04",
+    "type": "typed",
+    "question": "How many days is a CD2 or CD3 prescription valid from the date of issue, and can it be repeated?",
+    "answer": "14 days, cannot be repeated",
+    "explanation": "CD2 and CD3 prescriptions must be dispensed within 14 days of the date of issue and can NOT be repeated."
+  },
+  {
+    "id": "cd-05",
+    "type": "mc",
+    "question": "Diazepam, Alprazolam, Clonazepam, Midazolam and Zolpidem belong to which Schedule?",
+    "options": ["Schedule 2", "Schedule 3", "Schedule 4 Part 1", "Schedule 4 Part 2"],
+    "answer": "Schedule 4 Part 1",
+    "explanation": "Schedule 4 Part 1 covers most benzodiazepines and 'Z-drugs'. They have standard prescription validity (up to 6-12 months) and CAN be repeated per the prescriber's directions."
+  },
+  {
+    "id": "cd-06",
+    "type": "mc",
+    "question": "Which Schedule requires entries in a bound Controlled Drugs Register with a running stock balance?",
+    "options": ["Schedule 2 only", "Schedule 3 only", "Schedule 4 Part 1 only", "All CD schedules equally"],
+    "answer": "Schedule 2 only",
+    "explanation": "Only Schedule 2 requires CD Register entries. Schedule 3 requires safe custody but no register (invoices kept 2 years instead). Schedule 4 Part 1 requires neither safe custody nor a register."
+  },
+  {
+    "id": "cd-07",
+    "type": "typed",
+    "question": "For a paper CD2/CD3 prescription, list the five details that must be in the prescriber's own handwriting.",
+    "answer": "name of drug, dose, form, strength, total quantity in words and figures",
+    "explanation": "On paper: drug name, dose, form, strength, and total quantity (words and figures) must be handwritten. Via Healthmail, this handwriting rule no longer applies \u2014 the system's traceability is considered equivalent. The rule never applied to Schedule 4 Part 1 drugs."
+  },
+  {
+    "id": "cd-08",
+    "type": "mc",
+    "question": "For CD2 and CD3, when must the first instalment or supply be dispensed?",
+    "options": ["Anytime within 3 months", "Not before the prescription date, and no later than 14 days after", "Only on the exact prescription date", "Within 30 days"],
+    "answer": "Not before the prescription date, and no later than 14 days after",
+    "explanation": "The first instalment cannot be dispensed before the date on the prescription, nor later than 14 days after that date."
+  },
+  {
+    "id": "cd-09",
+    "type": "typed",
+    "question": "In the CD Register, what six items must be recorded when Controlled Drug stock is RECEIVED?",
+    "answer": "date received, name and address of supplier, amount received, form, new stock balance",
+    "explanation": "For stock received: date received, name/address of supplier, amount received, form (e.g. tabs, amps), and new stock balance. For stock supplied: date, name/address of patient/recipient, authority for supply, amount supplied, form, and new stock balance."
+  },
+  {
+    "id": "cd-10",
+    "type": "mc",
+    "question": "What must be done if an error is made in the Controlled Drugs Register?",
+    "options": ["Use correction fluid", "Cross out and rewrite neatly", "Make a dated and initialled marginal note \u2014 no alterations to the original entry", "Tear out the page"],
+    "answer": "Make a dated and initialled marginal note \u2014 no alterations to the original entry",
+    "explanation": "The CD Register must never be altered directly. Corrections require a marginal note that is dated and initialled, keeping a clear audit trail."
+  },
+  {
+    "id": "cd-11",
+    "type": "mc",
+    "question": "A CD2/CD3 prescription must include which extra detail beyond a standard prescription?",
+    "options": ["The patient's PPS number", "The prescriber's telephone number and total quantity in words and figures", "A GP's second signature", "A pharmacy stamp"],
+    "answer": "The prescriber's telephone number and total quantity in words and figures",
+    "explanation": "CD2/CD3/CD4.1 prescriptions require the prescriber's phone number plus the total quantity written in both words and figures, in addition to all standard prescription requirements."
+  },
+  {
+    "id": "cd-12",
+    "type": "typed",
+    "question": "What is Schedule 5 and how is it different from the rest?",
+    "answer": "low strength preparations exempt from most controls, e.g. low-dose codeine",
+    "explanation": "Schedule 5 (CD5) covers preparations with very low strengths of Controlled Drugs (e.g. codeine below a specified concentration) \u2014 exempt from most of the strict controls that apply to the other schedules."
+  }
+]

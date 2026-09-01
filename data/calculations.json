@@ -1,0 +1,105 @@
+[
+  {
+    "id": "calc-01",
+    "type": "typed",
+    "question": "Convert 0.5 grams to milligrams.",
+    "answer": "500 mg",
+    "explanation": "Going from a bigger unit (g) to a smaller unit (mg), multiply by 1000: 0.5 g \u00d7 1000 = 500 mg."
+  },
+  {
+    "id": "calc-02",
+    "type": "typed",
+    "question": "Convert 250 micrograms to milligrams.",
+    "answer": "0.25 mg",
+    "explanation": "Going from a smaller unit (mcg) to a bigger unit (mg), divide by 1000: 250 mcg \u00f7 1000 = 0.25 mg."
+  },
+  {
+    "id": "calc-03",
+    "type": "mc",
+    "question": "1% w/w means:",
+    "options": ["1mL of drug per 100mL of product", "1g of drug per 100g of product", "1g of drug per 100mL of product", "1mg of drug per 1mL of product"],
+    "answer": "1g of drug per 100g of product",
+    "explanation": "% w/w (weight in weight) = grams of drug per 100g of product. Used for creams and ointments (solids in solids)."
+  },
+  {
+    "id": "calc-04",
+    "type": "mc",
+    "question": "Which strength language is used for solutions/injections (solids dissolved in liquids)?",
+    "options": ["% w/w", "% w/v", "% v/v", "Ratio strength only"],
+    "answer": "% w/v",
+    "explanation": "% w/v (weight in volume) = grams of drug per 100mL of product, used for solutions and injections."
+  },
+  {
+    "id": "calc-05",
+    "type": "typed",
+    "question": "A prescription needs Hydrocortisone 1% w/w cream, 50g pot. How many grams of hydrocortisone powder are needed?",
+    "answer": "0.5 grams",
+    "explanation": "1% w/w = 1g per 100g. Proportion: (1/100) \u00d7 50 = 0.5 grams of hydrocortisone powder."
+  },
+  {
+    "id": "calc-06",
+    "type": "typed",
+    "question": "Adrenaline Injection is labelled 1:1000. How many milligrams of adrenaline are in a 1mL ampoule?",
+    "answer": "1 mg",
+    "explanation": "1:1000 means 1g in 1000mL = 1000mg in 1000mL = 1mg per 1mL. So a 1mL ampoule contains 1mg."
+  },
+  {
+    "id": "calc-07",
+    "type": "mc",
+    "question": "Amoxicillin Suspension 125mg/5mL is an example of which concentration language?",
+    "options": ["Percentage strength", "Ratio strength", "Amount strength", "Molarity"],
+    "answer": "Amount strength",
+    "explanation": "Amount strength (e.g. mg/mL) directly states how much drug is in a specific volume \u2014 the most direct language of the three."
+  },
+  {
+    "id": "calc-08",
+    "type": "typed",
+    "question": "A child is prescribed 180mg of paracetamol. The suspension is 120mg/5mL. How many mL are needed?",
+    "answer": "7.5 mL",
+    "explanation": "Strength per mL = 120/5 = 24mg/mL. Volume needed = 180 \u00f7 24 = 7.5mL."
+  },
+  {
+    "id": "calc-09",
+    "type": "typed",
+    "question": "State the dilution formula and what each letter means.",
+    "answer": "C1 x V1 = C2 x V2. C1 = starting concentration, V1 = starting volume, C2 = final concentration, V2 = final volume",
+    "explanation": "This formula is used whenever diluting a strong stock solution to make a weaker one. C1 and C2 must be in the same units before starting."
+  },
+  {
+    "id": "calc-10",
+    "type": "typed",
+    "question": "You need 250mL of a 2% cleaning solution from a 10% stock. How much stock solution and how much water are needed?",
+    "answer": "50mL of stock solution and 200mL of water",
+    "explanation": "10 \u00d7 V1 = 2 \u00d7 250 \u2192 V1 = 500/10 = 50mL of stock. Water = 250 \u2212 50 = 200mL."
+  },
+  {
+    "id": "calc-11",
+    "type": "mc",
+    "question": "'1 in 4' dilution notation means:",
+    "options": ["1 part drug to 4 parts diluent (5 total parts)", "1 part drug in a TOTAL of 4 parts (1 drug + 3 diluent)", "4 parts drug to 1 part diluent", "1 part drug per 4 litres"],
+    "answer": "1 part drug in a TOTAL of 4 parts (1 drug + 3 diluent)",
+    "explanation": "'X in Y' means X parts of active ingredient in a TOTAL of Y parts. So '1 in 4' = 1 part drug + 3 parts diluent = 4 total parts."
+  },
+  {
+    "id": "calc-12",
+    "type": "mc",
+    "question": "'1:4' dilution notation means:",
+    "options": ["1 part drug in a total of 4 parts", "1 part drug TO 4 parts diluent (5 total parts)", "The same as '1 in 4'", "4 parts drug to 1 part diluent"],
+    "answer": "1 part drug TO 4 parts diluent (5 total parts)",
+    "explanation": "'X:Y' means X parts active TO Y parts diluent, giving X+Y total parts. So '1:4' = 1 part drug + 4 parts diluent = 5 total parts \u2014 different from '1 in 4'!"
+  },
+  {
+    "id": "calc-13",
+    "type": "typed",
+    "question": "Name the 'Rule of 1000' for converting between metric weight/volume units.",
+    "answer": "multiply by 1000 to go from a bigger unit to a smaller unit; divide by 1000 to go from a smaller unit to a bigger unit",
+    "explanation": "kg\u2192g\u2192mg\u2192mcg\u2192ng\u2192pg, and L\u2192mL, are all related by factors of 1000."
+  },
+  {
+    "id": "calc-14",
+    "type": "typed",
+    "question": "What is the 'ballpark check' the lecture recommends after a dilution calculation?",
+    "answer": "check the answer makes sense \u2014 e.g. if diluting, your starting (stock) volume should be less than your final volume",
+    "explanation": "One of the Golden Rules: does the answer make sense? If your dilution answer doesn't feel right, it probably isn't \u2014 always get it checked by the pharmacist too."
+  }
+]

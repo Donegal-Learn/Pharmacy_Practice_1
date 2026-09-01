@@ -1,0 +1,140 @@
+[
+  {
+    "id": "reg-01",
+    "type": "mc",
+    "question": "Which regulator focuses on 'the practitioner and the practice' \u2014 pharmacists, pharmacies, and technicians?",
+    "options": ["HPRA", "PSI", "HSE", "PCRS"],
+    "answer": "PSI",
+    "explanation": "The Pharmaceutical Society of Ireland (PSI) regulates the people and places: pharmacists, pharmacy businesses, and (indirectly, through the supervising pharmacist) technicians.",
+    "hook": "PSI = People & practiceS-Involved."
+  },
+  {
+    "id": "reg-02",
+    "type": "mc",
+    "question": "Which regulator focuses on 'the product and the market' \u2014 licensing medicines and monitoring their safety?",
+    "options": ["PSI", "HPRA", "IPU", "DPC"],
+    "answer": "HPRA",
+    "explanation": "The Health Products Regulatory Authority (HPRA) licenses medicines (marketing authorisation), runs pharmacovigilance, regulates manufacturing/supply, and controls advertising."
+  },
+  {
+    "id": "reg-03",
+    "type": "typed",
+    "question": "Name the four 'Pillars of Governance' the PSI requires every pharmacy to have.",
+    "answer": "pharmacy owner, superintendent pharmacist, supervising pharmacist, all other pharmacists",
+    "explanation": "1) Pharmacy Owner (provides resources), 2) Superintendent Pharmacist (overall business responsibility), 3) Supervising Pharmacist (day-to-day premises responsibility \u2014 who you'll work with most), 4) All Other Pharmacists (share responsibility for safe practice)."
+  },
+  {
+    "id": "reg-04",
+    "type": "mc",
+    "question": "A medicine marked 'POM' in a rectangular box means:",
+    "options": ["General Sales List", "Pharmacy Medicine", "Prescription Only Medicine", "Controlled Drug"],
+    "answer": "Prescription Only Medicine",
+    "explanation": "POM medicines can only be supplied against a valid prescription from an authorised prescriber, and are kept in the dispensary out of public view."
+  },
+  {
+    "id": "reg-05",
+    "type": "mc",
+    "question": "Which category can be sold from supermarkets without pharmacist supervision?",
+    "options": ["POM", "P", "GSL", "CD"],
+    "answer": "GSL",
+    "explanation": "General Sales List (GSL) medicines have a wide safety margin and can be self-selected from open shelves in a range of retail outlets."
+  },
+  {
+    "id": "reg-06",
+    "type": "typed",
+    "question": "What letter marks a Pharmacy Medicine that must be sold under pharmacist supervision but needs no prescription?",
+    "answer": "P",
+    "explanation": "'P' medicines (e.g. higher-strength ibuprofen, emergency contraception) are kept behind the counter, not for self-selection, and require a pharmacist's advice."
+  },
+  {
+    "id": "reg-07",
+    "type": "mc",
+    "question": "Since March 2024, a prescriber can issue certain long-term prescriptions valid for up to:",
+    "options": ["3 months", "6 months", "9 months", "12 months"],
+    "answer": "12 months",
+    "explanation": "Since March 2024, prescribers can issue prescriptions for certain long-term medicines with total validity of up to 12 months \u2014 one of the biggest recent changes to prescription rules."
+  },
+  {
+    "id": "reg-08",
+    "type": "mc",
+    "question": "Since September 2024, who has the legal power to extend a standard 6-month prescription up to 12 months?",
+    "options": ["The dispensary technician", "The pharmacist", "The patient", "The HPRA"],
+    "answer": "The pharmacist",
+    "explanation": "Pharmacists can extend a standard 6-month prescription up to a maximum of 12 months in total \u2014 but this is NOT automatic; it requires clinical review, a conversation with the patient, and informing the prescriber within 7 days."
+  },
+  {
+    "id": "reg-09",
+    "type": "typed",
+    "question": "Name three categories of prescription that a pharmacist CANNOT extend.",
+    "answer": "controlled drugs, do not extend written by prescriber, high-tech arrangement medicines, PrEP",
+    "explanation": "A pharmacist cannot extend a prescription if: it's a Controlled Drug (Schedule 2, 3 or 4), the prescriber wrote 'do not extend', it's on the High-Tech Arrangement, or it's for HIV PrEP."
+  },
+  {
+    "id": "reg-10",
+    "type": "mc",
+    "question": "What happened to the temporary COVID-19 rule allowing 9-month prescription extensions?",
+    "options": ["It became permanent", "It was revoked on 1 September 2024, replaced by the 12-month framework", "It was extended to 18 months", "It never existed"],
+    "answer": "It was revoked on 1 September 2024, replaced by the 12-month framework",
+    "explanation": "The temporary COVID-era 9-month extension rule ended on 1 September 2024. All extensions now fall under the new 12-month framework (prescriber-specified or pharmacist-led)."
+  },
+  {
+    "id": "reg-11",
+    "type": "typed",
+    "question": "List the five key components a paper prescription must contain to be legally valid.",
+    "answer": "patient name and address, prescriber name address and registration number, date of issue, medicine details, prescriber signature",
+    "explanation": "A valid prescription needs: patient's name/address; prescriber's name, address and registration number; date of issue; clear medicine details (name, strength, form, quantity); and the prescriber's signature."
+  },
+  {
+    "id": "reg-12",
+    "type": "mc",
+    "question": "Which secure system is the ONLY approved method for electronic prescriptions in Ireland?",
+    "options": ["Gmail", "Fax", "Healthmail", "WhatsApp"],
+    "answer": "Healthmail",
+    "explanation": "Only the approved, secure HSE Healthmail system is legally valid for electronic prescriptions. Private email or fax prescriptions are NOT legally valid."
+  },
+  {
+    "id": "reg-13",
+    "type": "typed",
+    "question": "For a Healthmail electronic prescription, what must the pharmacy do with the electronic copy received?",
+    "answer": "print a copy",
+    "explanation": "The pharmacy must print a copy of a Healthmail prescription; this printed copy is treated as the legal original. Both the print and the electronic version must be retained for two years."
+  },
+  {
+    "id": "reg-14",
+    "type": "mc",
+    "question": "An S1A prescription (single supply) can be repeated:",
+    "options": ["Never, under any circumstances", "Only if the prescriber specifies the number of repeats or intervals, up to 2 further occasions", "Unlimited times", "Only for Controlled Drugs"],
+    "answer": "Only if the prescriber specifies the number of repeats or intervals, up to 2 further occasions",
+    "explanation": "S1A is single-supply by default. A prescriber can authorise repeats by specifying the number or interval; if only intervals are given, it can be repeated up to two further times (dispensed three times in total)."
+  },
+  {
+    "id": "reg-15",
+    "type": "typed",
+    "question": "What are the eight mandatory particulars that must appear on a dispensing label?",
+    "answer": "date of dispensing, patient name, pharmacy name and address, medicine name strength amount form, directions for use, cautionary notices, keep out of reach of children, for external use only if applicable",
+    "explanation": "1) Date of dispensing, 2) Patient's name, 3) Pharmacy name & address, 4) Medicine (name, strength, amount, form), 5) Directions for use, 6) Cautionary notices, 7) 'Keep out of the reach of children', 8) 'For external use only' (where applicable)."
+  },
+  {
+    "id": "reg-16",
+    "type": "mc",
+    "question": "Standard prescription records must be retained for how long?",
+    "options": ["6 months", "1 year", "2 years", "5 years"],
+    "answer": "2 years",
+    "explanation": "Standard prescriptions and the CD register must be kept for 2 years from the last supply/entry. Veterinary records are kept 5 years, vaccination records 8 years."
+  },
+  {
+    "id": "reg-17",
+    "type": "typed",
+    "question": "A pharmacy data breach must be notified to the Data Protection Commission within how many hours?",
+    "answer": "72",
+    "explanation": "If personal data is lost, stolen, or accessed without authorisation, the pharmacy must notify the DPC within 72 hours."
+  },
+  {
+    "id": "reg-18",
+    "type": "mc",
+    "question": "Which upcoming legislation aims to modernise pharmacy law to support a national eHealth strategy?",
+    "options": ["The Misuse of Drugs Act", "The Health (Pharmacy and Prescribing) Bill", "The Poisons Act", "GDPR"],
+    "answer": "The Health (Pharmacy and Prescribing) Bill",
+    "explanation": "This upcoming bill aims to modernise pharmacy law to better support electronic prescribing and a national eHealth strategy, alongside a mandatory National Veterinary Prescription System already rolling out."
+  }
+]

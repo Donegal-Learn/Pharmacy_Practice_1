@@ -1,0 +1,84 @@
+[
+  {
+    "id": "err-01",
+    "type": "typed",
+    "question": "What is a 'Just Culture' in the context of PSI guidance on medication errors?",
+    "answer": "a non-punitive environment that encourages open reporting of errors and near misses without fear, focused on improving systems not blaming individuals",
+    "explanation": "The PSI promotes a culture of safety, treating every error as a learning opportunity to enhance patient care, rather than assigning individual blame."
+  },
+  {
+    "id": "err-02",
+    "type": "mc",
+    "question": "What is a 'near miss' also known as?",
+    "options": ["A dispensing error", "A 'good catch'", "A root cause", "A latent factor"],
+    "answer": "A 'good catch'",
+    "explanation": "Near misses ('good catches') are errors caught before they reach or harm a patient \u2014 critical learning opportunities for improving systems."
+  },
+  {
+    "id": "err-03",
+    "type": "typed",
+    "question": "Name the three types of error causes described, with a brief description of each.",
+    "answer": "slips/lapses (attention failures), rule-based mistakes (misapplying knowledge), violations (deviating from protocol)",
+    "explanation": "Slips/Lapses = attention failures. Rule-Based Mistakes = misapplying knowledge. Violations = deliberately deviating from protocol. Latent factors are underlying system issues; triggering factors are immediate causes like distraction or fatigue."
+  },
+  {
+    "id": "err-04",
+    "type": "typed",
+    "question": "What does each letter of the HELP acronym for final dispensing checks stand for?",
+    "answer": "H = How much has been dispensed, E = Expiry date / correct PIL, L = Label check, P = Product check",
+    "explanation": "H: How much has been dispensed? E: Expiry date check, is the correct PIL present? L: Label check for correct patient/product/dose/warnings. P: Product check for correct medication and strength.",
+    "hook": "HELP \u2014 the final check that 'helps' catch errors before they reach the patient."
+  },
+  {
+    "id": "err-05",
+    "type": "mc",
+    "question": "In the bisoprolol case study, what was a key contributing factor?",
+    "options": ["Correct labelling but wrong patient", "Similar packaging with different strengths stored together, no independent check", "A LASA drug name confusion", "An expired product"],
+    "answer": "Similar packaging with different strengths stored together, no independent check",
+    "explanation": "A patient received 10mg instead of 1.25mg bisoprolol, leading to hospitalisation. The key learning: physically separate different strengths and implement a mandatory, independent check."
+  },
+  {
+    "id": "err-06",
+    "type": "typed",
+    "question": "What does LASA stand for, and why is it relevant to the methadone/methylphenidate case study?",
+    "answer": "Look-Alike, Sound-Alike; a child was given methadone instead of methylphenidate due to LASA confusion and handwriting ambiguity",
+    "explanation": "LASA drug name confusion, combined with handwritten prescription ambiguity, led to this serious error. Key learning: be vigilant with LASA drugs and clarify ambiguity with the prescriber, especially for high-risk patients."
+  },
+  {
+    "id": "err-07",
+    "type": "mc",
+    "question": "In the 'wrong patient' case study involving warfarin, what was the key learning?",
+    "options": ["Always check for allergies", "A robust patient ID check (e.g. name and address) is a non-negotiable final step", "Store warfarin separately", "Use electronic labels only"],
+    "answer": "A robust patient ID check (e.g. name and address) is a non-negotiable final step",
+    "explanation": "An elderly patient was given another patient's medication bag at a busy handover. Confirming identity (name and address) at handover is essential."
+  },
+  {
+    "id": "err-08",
+    "type": "typed",
+    "question": "What is the absolute first priority (Step 1) when an error reaches a patient?",
+    "answer": "immediate patient care \u2014 assess the patient for harm and provide any necessary corrective action",
+    "explanation": "Step 1: Immediate Patient Care is the absolute priority, before communication or documentation steps."
+  },
+  {
+    "id": "err-09",
+    "type": "mc",
+    "question": "What is the 'Duty of Candour' referred to in Step 2 of the error action plan?",
+    "options": ["A legal requirement to sue the prescriber", "Openly and honestly informing the patient/carer and apologising sincerely", "Reporting only to the HPRA", "Keeping the error confidential from the patient"],
+    "answer": "Openly and honestly informing the patient/carer and apologising sincerely",
+    "explanation": "Step 2: Open Communication (Duty of Candour) \u2014 inform the patient/carer honestly, apologise sincerely, and inform other relevant healthcare professionals like the GP."
+  },
+  {
+    "id": "err-10",
+    "type": "typed",
+    "question": "In Step 3 of the action plan, who must be informed after formal documentation of an error?",
+    "answer": "the superintendent pharmacist and indemnity providers",
+    "explanation": "Step 3: Formal Documentation & Reporting \u2014 document all details on a medication error report form, report to the superintendent pharmacist, and inform indemnity providers."
+  },
+  {
+    "id": "err-11",
+    "type": "typed",
+    "question": "What does RCA stand for and what is its purpose?",
+    "answer": "Root Cause Analysis \u2014 systematically investigating an error to find underlying system-based causes, not just individual actions",
+    "explanation": "RCA looks beyond the individual to identify system-based causes, feeding into meaningful changes that are then communicated to all staff to prevent recurrence."
+  }
+]

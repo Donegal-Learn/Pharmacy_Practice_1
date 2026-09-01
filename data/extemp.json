@@ -1,0 +1,128 @@
+[
+  {
+    "id": "ext-01",
+    "type": "typed",
+    "question": "Define extemporaneous compounding.",
+    "answer": "the art or science of assembling individual chemical components into a usable drug, typically when the drug is unavailable from commercial manufacturers",
+    "explanation": "Nowadays this is done by a pharmacist seeking a drug otherwise unavailable commercially. The practice dates back to Ancient Egypt."
+  },
+  {
+    "id": "ext-02",
+    "type": "typed",
+    "question": "Give three modern reasons compounding is still needed.",
+    "answer": "dermatology formulations, paediatric liquid versions of tablet-only drugs, palliative care unique strengths, discontinued/unavailable medicines, veterinary medicine",
+    "explanation": "Compounding fills gaps where no commercial product meets a patient's specific need \u2014 dermatology, paediatrics, palliative care, discontinued products, and veterinary use."
+  },
+  {
+    "id": "ext-03",
+    "type": "mc",
+    "question": "What is the difference between accuracy and precision in weighing?",
+    "options": ["They mean the same thing", "Accuracy = closeness to the true target value; Precision = consistency between repeated measurements", "Accuracy is only for liquids, precision only for powders", "Precision is more important than accuracy"],
+    "answer": "Accuracy = closeness to the true target value; Precision = consistency between repeated measurements",
+    "explanation": "Accuracy is hitting the bullseye; precision is landing darts close together (even if off-target). Pharmacy needs BOTH accurate and precise measurements."
+  },
+  {
+    "id": "ext-04",
+    "type": "typed",
+    "question": "What is 'tolerance' in the context of pharmacy weighing?",
+    "answer": "the acceptable margin of error that doesn't affect the product's safety or effectiveness",
+    "explanation": "E.g. a cream's final weight might be allowed to fall between 99g and 101g \u2014 that small window is the tolerance."
+  },
+  {
+    "id": "ext-05",
+    "type": "mc",
+    "question": "On a manual (two-pan) balance, where are weights placed and where are ingredients placed?",
+    "options": ["Weights on the right, ingredients on the left", "Weights on the left (metal pan), ingredients on the right (glass pan)", "Both together on the same pan", "It doesn't matter which side"],
+    "answer": "Weights on the left (metal pan), ingredients on the right (glass pan)",
+    "explanation": "Standard manual balance technique: weights on the left metal pan, ingredients transferred to the right glass pan until balanced, using tweezers for the weights."
+  },
+  {
+    "id": "ext-06",
+    "type": "typed",
+    "question": "What must you do before weighing on an electronic balance if using a container?",
+    "answer": "place the empty container on the balance and press 'Tare' or 'Zero'",
+    "explanation": "Taring sets the balance to zero with the empty container in place, so only the ingredient weight registers."
+  },
+  {
+    "id": "ext-07",
+    "type": "mc",
+    "question": "When reading a liquid measure with a meniscus, where should you read from and where should your eye be?",
+    "options": ["Top of the meniscus; eye above the container", "Bottom of the meniscus; eye level with the meniscus", "Either point; eye position doesn't matter", "Middle of the meniscus; eye below the container"],
+    "answer": "Bottom of the meniscus; eye level with the meniscus",
+    "explanation": "Always read from the bottom of the meniscus with your eye level with it, on a flat stable surface, for an accurate reading."
+  },
+  {
+    "id": "ext-08",
+    "type": "typed",
+    "question": "To make 100mL of a 1 in 4 solution, how much drug and how much diluent do you use?",
+    "answer": "25mL of drug and 75mL of diluent",
+    "explanation": "'1 in 4' = 1 part drug in a TOTAL of 4 parts, so 1/4 of 100mL = 25mL drug, and 75mL diluent."
+  },
+  {
+    "id": "ext-09",
+    "type": "typed",
+    "question": "To make 100mL of a 1:4 solution, how much drug and how much diluent do you use?",
+    "answer": "20mL of drug and 80mL of diluent",
+    "explanation": "'1:4' = 1 part drug TO 4 parts diluent = 5 total parts, so drug = 1/5 of 100mL = 20mL, diluent = 4/5 = 80mL."
+  },
+  {
+    "id": "ext-10",
+    "type": "mc",
+    "question": "Which of these is a contamination-avoidance rule for compounding?",
+    "options": ["Return unused material to the stock bottle to avoid waste", "Never return unused material to stock bottles", "Leave lids off stock bottles for faster access", "Touch the final product with bare hands to check texture"],
+    "answer": "Never return unused material to stock bottles",
+    "explanation": "Other rules: use clean/dry equipment, keep the work area clear, don't leave lids off stock bottles, don't leave weighed items unlabelled, and don't touch materials/product with bare hands."
+  },
+  {
+    "id": "ext-11",
+    "type": "typed",
+    "question": "List the key items that must appear in extemporaneous preparation records.",
+    "answer": "the formula, ingredients and quantities, source of ingredients, batch numbers and expiry dates, use-by date of the product, identity of personnel involved, pharmacist's signature, and patient/prescription details if applicable",
+    "explanation": "Meticulous record-keeping is essential for traceability, quality, and accountability of every compounded product."
+  },
+  {
+    "id": "ext-12",
+    "type": "mc",
+    "question": "The 'doubling-up' method for powders is used to:",
+    "options": ["Speed up dispensing", "Achieve a homogeneous mixture when combining powders of unequal weight/density", "Increase the drug's potency", "Reduce the total batch size"],
+    "answer": "Achieve a homogeneous mixture when combining powders of unequal weight/density",
+    "explanation": "It minimises segregation of a small, often potent component by gradually and evenly doubling the diluent amount added at each mixing step."
+  },
+  {
+    "id": "ext-13",
+    "type": "typed",
+    "question": "Using the doubling-up method: 1g of a potent drug is mixed with 15g of lactose. What is the total final mixture weight, and how many doubling steps does it take?",
+    "answer": "16g total, in 4 doubling steps (2g \u2192 4g \u2192 8g \u2192 16g)",
+    "explanation": "Step 1: 1g drug + 1g lactose = 2g. Step 2: add 2g lactose = 4g. Step 3: add 4g lactose = 8g. Step 4: add 8g lactose = 16g total uniform mixture."
+  },
+  {
+    "id": "ext-14",
+    "type": "typed",
+    "question": "What is trituration and name one of its purposes.",
+    "answer": "rubbing/grinding/pulverizing a solid into fine particles to increase surface area and promote even distribution; purposes include particle size reduction, homogeneous mixing, faster dissolution, better texture, or uniform potency",
+    "explanation": "Trituration is central to preparing safe, evenly potent powders, ointments and suspensions, and is often the first step before geometric dilution (doubling-up)."
+  },
+  {
+    "id": "ext-15",
+    "type": "mc",
+    "question": "What is an 'excipient'?",
+    "options": ["The active drug ingredient", "An inactive ingredient, sometimes used to bulk up formulations with very potent actives", "A type of measuring device", "A Controlled Drug schedule"],
+    "answer": "An inactive ingredient, sometimes used to bulk up formulations with very potent actives",
+    "explanation": "Examples include water, alcohol, glycerol, oils, soft paraffin, preservatives, buffers, and thickening/suspending agents."
+  },
+  {
+    "id": "ext-16",
+    "type": "typed",
+    "question": "Name three 'official' sources for compounding product formulae.",
+    "answer": "British Pharmacopoeia (BP), British Pharmaceutical Codex (BPC), European Pharmacopoeia (EP)",
+    "explanation": "Unofficial formulae (not from these publications) must include a full list of ingredients and quantities on the label instead."
+  },
+  {
+    "id": "ext-17",
+    "type": "mc",
+    "question": "What is a typical discard date range for an extemporaneous preparation?",
+    "options": ["1\u20132 days", "2 weeks to 3 months, kept as short as possible", "1\u20132 years", "5 years, same as a manufactured product"],
+    "answer": "2 weeks to 3 months, kept as short as possible",
+    "explanation": "Given the lack of industrial stability testing, discard dates for extemporaneous preparations are kept deliberately short."
+  }
+]

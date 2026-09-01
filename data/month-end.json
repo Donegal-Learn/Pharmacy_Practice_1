@@ -1,0 +1,39 @@
+[
+  {
+    "id": "me-01",
+    "type": "typed",
+    "question": "What are the submission deadlines for the 'Early Pay' and 'Normal Pay' cycles?",
+    "answer": "Early Pay: midnight on the 3rd working day; Normal Pay: midnight on the 7th of the month",
+    "explanation": "Working days are Monday to Friday, excluding public/bank holidays. Best practice is to submit the initial claim file on the 1st working day to leave buffer time."
+  },
+  {
+    "id": "me-02",
+    "type": "mc",
+    "question": "Where do you check that the PCRS has received your claim file?",
+    "options": ["The 'Exception File' only", "Pharmacy Application Suite \u2192 Claiming tab \u2192 Transmission History", "A phone call to the HSE", "The Controlled Drugs Register"],
+    "answer": "Pharmacy Application Suite \u2192 Claiming tab \u2192 Transmission History",
+    "explanation": "Transmission History confirms exactly when your files were received by the PCRS \u2014 your proof of submission."
+  },
+  {
+    "id": "me-03",
+    "type": "typed",
+    "question": "What is an 'Exception File' and by when must corrections be resubmitted?",
+    "answer": "a file listing rejected claims and reasons; corrections must be resubmitted by midnight on the 8th working day",
+    "explanation": "Download the exception file (usually available within 24 hours), examine rejection reasons, correct errors in the pharmacy system, and resubmit \u2014 all by midnight on the 8th working day."
+  },
+  {
+    "id": "me-04",
+    "type": "mc",
+    "question": "What is the 'Yellow Bag' used for?",
+    "options": ["Storing Controlled Drugs", "Submitting physical paperwork when requested by PCRS for auditing", "Daily waste disposal", "Vaccine cold storage"],
+    "answer": "Submitting physical paperwork when requested by PCRS for auditing",
+    "explanation": "If selected for audit, prescriptions and summary forms are sorted into the yellow bag in two bundles: Bundle 1 (GMS, Hospital Emergency, Stock Orders, Dental) and Bundle 2 (DPS, LTI, High Tech, HAA, EU claims)."
+  },
+  {
+    "id": "me-05",
+    "type": "typed",
+    "question": "List the two bundles used to sort claims for the Yellow Bag.",
+    "answer": "Bundle 1: GMS (Regular, Repeat, Healthmail), Hospital Emergency, Stock Orders, Dental. Bundle 2: DPS, LTI, High Tech, HAA, EU claims",
+    "explanation": "These bundles keep audit paperwork organised and consistent with PCRS expectations."
+  }
+]

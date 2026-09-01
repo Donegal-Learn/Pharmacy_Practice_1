@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ulm-01",
+    "type": "typed",
+    "question": "What is the official Irish term for an Unlicensed Medicine supplied to meet an individual patient's needs?",
+    "answer": "Exempt Medicinal Product (EMP)",
+    "explanation": "'Exempt Medicinal Products' (EMPs) is the official term for unlicensed/unauthorised medicines supplied in specific circumstances for individual patient needs."
+  },
+  {
+    "id": "ulm-02",
+    "type": "mc",
+    "question": "What is the 'golden rule' for using EMPs?",
+    "options": ["Use them whenever cheaper than the licensed alternative", "Their use should be rare, minimised to when no suitable licensed alternative exists", "Only pharmacists may request them", "They require Garda approval"],
+    "answer": "Their use should be rare, minimised to when no suitable licensed alternative exists",
+    "explanation": "EMP use should be a rare event, reserved for situations where no suitable licensed alternative is available for the patient."
+  },
+  {
+    "id": "ulm-03",
+    "type": "mc",
+    "question": "For an EMP to be reimbursed, who must have initiated the therapy?",
+    "options": ["A GP", "A hospital consultant", "The patient themselves", "The pharmacist"],
+    "answer": "A hospital consultant",
+    "explanation": "EMP reimbursement requires the therapy to be consultant-initiated (documented, along with the hospital attended) \u2014 except where the need arises from a shortage of a licensed Irish product. A GP prescription is acceptable only if the pharmacist is satisfied treatment was originally started by a consultant."
+  },
+  {
+    "id": "ulm-04",
+    "type": "typed",
+    "question": "What must both prescriber and pharmacist inform the patient about when supplying an EMP?",
+    "answer": "that the medicine is not licensed in Ireland and its quality, safety and efficacy have not been formally established here",
+    "explanation": "This is a shared duty on both prescriber and dispensing pharmacist, ensuring the patient understands the status of their treatment."
+  },
+  {
+    "id": "ulm-05",
+    "type": "mc",
+    "question": "Uncoded EMPs are often claimed using which special code prefix?",
+    "options": ["S1A", "P codes", "'777' codes (e.g. 77750)", "CD codes"],
+    "answer": "'777' codes (e.g. 77750)",
+    "explanation": "Uncoded EMPs and unauthorised medicines require individual PCRS approval before reimbursement and are often claimed with '777' codes, accompanied by a copy of the product invoice."
+  },
+  {
+    "id": "ulm-06",
+    "type": "typed",
+    "question": "In the Nadolol example, where is a consultant's application for EMP reimbursement sent?",
+    "answer": "PCRS (PCRS.ExemptMed@hse.ie)",
+    "explanation": "The consultant completes an individual application form, sent to PCRS.ExemptMed@hse.ie. Once approved, it appears on the Secure Scheme Checker under 'Patient Specific Arrangements' before the pharmacy can dispense and claim."
+  }
+]
