@@ -1,0 +1,62 @@
+[
+  {
+    "id": "hs-01",
+    "type": "typed",
+    "question": "Which body is responsible for enforcing workplace health and safety in Ireland?",
+    "answer": "the Health and Safety Authority (HSA)",
+    "explanation": "The HSA is the state body responsible for securing safety, health and welfare at work, and can inspect and prosecute where standards aren't met."
+  },
+  {
+    "id": "hs-02",
+    "type": "mc",
+    "question": "What is a 'Safety Statement'?",
+    "options": ["A verbal briefing given once a year", "A document showing how a company identifies hazards, assesses risk, and manages health and safety", "An insurance certificate", "A patient consent form"],
+    "answer": "A document showing how a company identifies hazards, assesses risk, and manages health and safety",
+    "explanation": "It's a legal requirement under Section 20 of the 2005 Act \u2014 a written programme to safeguard employees and others (like customers) present at the workplace."
+  },
+  {
+    "id": "hs-03",
+    "type": "typed",
+    "question": "What is the difference between a hazard and a risk?",
+    "answer": "a hazard is anything with the potential to cause harm; a risk is the likelihood that harm will actually occur, combined with its severity",
+    "explanation": "A hazard is the source of potential harm (e.g. a chemical). A risk combines the likelihood of that harm occurring with how severe it would be."
+  },
+  {
+    "id": "hs-04",
+    "type": "typed",
+    "question": "List the 6 steps for creating a Safety Statement.",
+    "answer": "draw up a policy, identify hazards, carry out a risk assessment, decide on precautions, record findings, review and update",
+    "explanation": "1. Draw up a health & safety policy 2. Identify the hazards 3. Carry out a risk assessment 4. Decide what precautions are needed 5. Record the findings 6. Review and update as necessary."
+  },
+  {
+    "id": "hs-05",
+    "type": "mc",
+    "question": "Which control best addresses the manual handling hazard of lifting heavy stock?",
+    "options": ["CCTV and panic alarms", "Train staff in proper lifting technique and use trolleys", "Store chemicals in original containers", "Clear rubbish regularly"],
+    "answer": "Train staff in proper lifting technique and use trolleys",
+    "explanation": "Manual handling risk (back injury, muscular strain) is controlled through lifting training and use of trolleys for heavy items."
+  },
+  {
+    "id": "hs-06",
+    "type": "mc",
+    "question": "Which pharmacy hazard is addressed by CCTV, panic alarms, and lone-working policies?",
+    "options": ["Slips, trips and falls", "Security (violence during robbery)", "Fire and blocked exits", "Chemical exposure"],
+    "answer": "Security (violence during robbery)",
+    "explanation": "Security risks to staff are controlled with measures like CCTV, panic alarms, and addressing lone-working arrangements."
+  },
+  {
+    "id": "hs-07",
+    "type": "typed",
+    "question": "Name three reasons given for managing workplace safety.",
+    "answer": "financial reasons, legal reasons, moral and ethical reasons",
+    "explanation": "1. Financial \u2014 avoids costs of accidents. 2. Legal \u2014 required by law, HSA inspectors check compliance, prosecution risk. 3. Moral/ethical \u2014 employers are bound to prevent injury and ill-health."
+  },
+  {
+    "id": "hs-08",
+    "type": "mc",
+    "question": "What tools are used to score and visualise workplace risks?",
+    "options": ["A Safety Statement checklist", "A Risk Tolerability Table and Risk Matrix", "A CD Register", "A GDPR audit form"],
+    "answer": "A Risk Tolerability Table and Risk Matrix",
+    "explanation": "Risk assessment calculates the severity of potential harm and the likelihood it will occur, using a Risk Tolerability Table to score risks and a Risk Matrix to visualise them."
+  }
+]

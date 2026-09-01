@@ -1,0 +1,62 @@
+[
+  {
+    "id": "eo-01",
+    "type": "mc",
+    "question": "Which of these can a trained community pharmacist supply and administer WITHOUT a prescription?",
+    "options": ["Flu vaccine", "Insulin", "Warfarin", "Methadone"],
+    "answer": "Flu vaccine",
+    "explanation": "Pharmacists can supply/administer a range of vaccines without a prescription \u2014 including flu, pneumococcal (PPV23), shingles, COVID-19, HPV, MenB, MenACWY, Tdap, and MMR \u2014 once they've completed the required training."
+  },
+  {
+    "id": "eo-02",
+    "type": "mc",
+    "question": "A trained pharmacist can supply Naloxone (without a prescription) for:",
+    "options": ["Anaphylactic shock", "Hypoglycaemia", "Respiratory depression from known or suspected narcotic overdose", "Severe angina"],
+    "answer": "Respiratory depression from known or suspected narcotic overdose",
+    "explanation": "Naloxone hydrochloride 1mg/ml pre-filled injection is for respiratory depression secondary to known or suspected narcotic overdose. Pharmacists must complete PSI-approved training first."
+  },
+  {
+    "id": "eo-03",
+    "type": "typed",
+    "question": "Match the emergency medicine to its use: Epinephrine, Glucagon, GTN spray, Salbutamol inhaler.",
+    "answer": "Epinephrine = anaphylaxis; Glucagon = hypoglycaemia; GTN spray = severe angina; Salbutamol = acute asthma",
+    "explanation": "Epinephrine (adrenaline) \u2014 anaphylactic shock. Glucagon \u2014 hypoglycaemia. GTN sublingual spray \u2014 severe angina. Salbutamol 100mcg inhaler \u2014 acute asthma attack."
+  },
+  {
+    "id": "eo-04",
+    "type": "mc",
+    "question": "A doctor, dentist or vet obtaining Controlled Drugs by requisition must supply a signed requisition within:",
+    "options": ["6 hours", "24 hours", "72 hours", "7 days"],
+    "answer": "24 hours",
+    "explanation": "A practitioner may obtain CDs provided they undertake to supply a signed requisition within 24 hours."
+  },
+  {
+    "id": "eo-05",
+    "type": "typed",
+    "question": "The old Irish veterinary medicine classifications (VPO, POM(E), PS, LM) were replaced by a simpler three-category system. Name the three new categories.",
+    "answer": "POM, LR (Licensed Retailer), CAM (Companion Animal Medicine)",
+    "explanation": "Since January 2022, veterinary medicines are classified as POM, LR (Licensed Retailer), or CAM (Companion Animal Medicine) \u2014 a much simpler system than the old VPO/POM(E)/PS/LM categories."
+  },
+  {
+    "id": "eo-06",
+    "type": "typed",
+    "question": "What is the Emergency Hospital Prescription Facility and who is it for?",
+    "answer": "allows 30 days' supply of medicines for medical card patients discharged from hospital late in the day, outside surgery hours, or at weekends",
+    "explanation": "It permits dispensing 30 days' supply based on hospital prescriptions to medical card patients discharged outside normal GP hours. Note: this is NOT a legal requirement \u2014 it's for reimbursement/claims purposes only."
+  },
+  {
+    "id": "eo-07",
+    "type": "mc",
+    "question": "Under the Hospital Emergency Scheme, the prescribing doctor is entered using which code number?",
+    "options": ["00000", "61559", "77750", "12345"],
+    "answer": "61559",
+    "explanation": "Hospital casualty/acute doctors aren't part of the GMS, so code 61559 is used to represent the prescribing doctor on the claim form."
+  },
+  {
+    "id": "eo-08",
+    "type": "typed",
+    "question": "If a vet fails to provide the follow-up prescription after requesting an emergency veterinary supply, what happens?",
+    "answer": "the pharmacy may refuse future emergency supplies for that vet",
+    "explanation": "If a vet fails to supply the prescription after an emergency veterinary supply, the pharmacy may decline to provide further emergency supplies for that vet in future."
+  }
+]
