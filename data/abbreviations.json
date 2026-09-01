@@ -1,0 +1,355 @@
+[
+  {
+    "id": "abbr-01",
+    "type": "typed",
+    "question": "What does the abbreviation “a.c.” mean?",
+    "answer": "before meals",
+    "explanation": "a.c. comes from the Latin ‘ante cibum’, meaning before meals.",
+    "hook": "From Latin ‘ante cibum’."
+  },
+  {
+    "id": "abbr-02",
+    "type": "typed",
+    "question": "What does the abbreviation “alt. h.” mean?",
+    "answer": "every other hour",
+    "explanation": "alt. h. comes from the Latin ‘alternis horis’, meaning every other hour.",
+    "hook": "From Latin ‘alternis horis’."
+  },
+  {
+    "id": "abbr-03",
+    "type": "typed",
+    "question": "What does the abbreviation “a.m.” mean?",
+    "answer": "morning, before noon",
+    "explanation": "a.m. comes from the Latin ‘ante meridiem’, meaning morning, before noon.",
+    "hook": "From Latin ‘ante meridiem’."
+  },
+  {
+    "id": "abbr-04",
+    "type": "typed",
+    "question": "What does the abbreviation “amp” mean?",
+    "answer": "ampule",
+    "explanation": "amp means ampule."
+  },
+  {
+    "id": "abbr-05",
+    "type": "typed",
+    "question": "What does the abbreviation “bis” mean?",
+    "answer": "twice",
+    "explanation": "bis comes from the Latin ‘bis’, meaning twice.",
+    "hook": "From Latin ‘bis’."
+  },
+  {
+    "id": "abbr-06",
+    "type": "typed",
+    "question": "What does the abbreviation “b.d./b.i.d.” mean?",
+    "answer": "twice daily",
+    "explanation": "b.d./b.i.d. comes from the Latin ‘bis in die’, meaning twice daily.",
+    "hook": "From Latin ‘bis in die’."
+  },
+  {
+    "id": "abbr-07",
+    "type": "typed",
+    "question": "What does the abbreviation “cap., caps.” mean?",
+    "answer": "capsule",
+    "explanation": "cap., caps. comes from the Latin ‘capsula’, meaning capsule.",
+    "hook": "From Latin ‘capsula’."
+  },
+  {
+    "id": "abbr-08",
+    "type": "typed",
+    "question": "What does the abbreviation “c, c.” mean?",
+    "answer": "with",
+    "explanation": "c, c. comes from the Latin ‘cum’, meaning with. It is usually written with a bar on top of the \"c\".",
+    "hook": "From Latin ‘cum’."
+  },
+  {
+    "id": "abbr-09",
+    "type": "typed",
+    "question": "What does the abbreviation “cc” mean?",
+    "answer": "with food",
+    "explanation": "cc comes from the Latin ‘cum cibo’, meaning with food.",
+    "hook": "From Latin ‘cum cibo’."
+  },
+  {
+    "id": "abbr-10",
+    "type": "typed",
+    "question": "What does the abbreviation “disp.” mean?",
+    "answer": "dispersible or dispense",
+    "explanation": "disp. means dispersible or dispense."
+  },
+  {
+    "id": "abbr-11",
+    "type": "typed",
+    "question": "What does the abbreviation “gtt(s)” mean?",
+    "answer": "drop(s)",
+    "explanation": "gtt(s) comes from the Latin ‘gutta(e)’, meaning drop(s).",
+    "hook": "From Latin ‘gutta(e)’."
+  },
+  {
+    "id": "abbr-12",
+    "type": "typed",
+    "question": "What does the abbreviation “mane” mean?",
+    "answer": "in the morning",
+    "explanation": "mane comes from the Latin ‘mane’, meaning in the morning.",
+    "hook": "From Latin ‘mane’."
+  },
+  {
+    "id": "abbr-13",
+    "type": "typed",
+    "question": "What does the abbreviation “mcg” mean?",
+    "answer": "microgram",
+    "explanation": "mcg means microgram."
+  },
+  {
+    "id": "abbr-14",
+    "type": "typed",
+    "question": "What does the abbreviation “m.d.u.” mean?",
+    "answer": "to be used as directed",
+    "explanation": "m.d.u. comes from the Latin ‘more dicto utendus’, meaning to be used as directed.",
+    "hook": "From Latin ‘more dicto utendus’."
+  },
+  {
+    "id": "abbr-15",
+    "type": "typed",
+    "question": "What does the abbreviation “mist.” mean?",
+    "answer": "mix",
+    "explanation": "mist. comes from the Latin ‘mistura’, meaning mix.",
+    "hook": "From Latin ‘mistura’."
+  },
+  {
+    "id": "abbr-16",
+    "type": "typed",
+    "question": "What does the abbreviation “mitte” mean?",
+    "answer": "send",
+    "explanation": "mitte comes from the Latin ‘mitte’, meaning send.",
+    "hook": "From Latin ‘mitte’."
+  },
+  {
+    "id": "abbr-17",
+    "type": "typed",
+    "question": "What does the abbreviation “noct.” mean?",
+    "answer": "at night",
+    "explanation": "noct. comes from the Latin ‘nocte’, meaning at night.",
+    "hook": "From Latin ‘nocte’."
+  },
+  {
+    "id": "abbr-18",
+    "type": "typed",
+    "question": "What does the abbreviation “od” mean?",
+    "answer": "every day/once daily ",
+    "explanation": "od comes from the Latin ‘omne in die’, meaning every day/once daily .",
+    "hook": "From Latin ‘omne in die’."
+  },
+  {
+    "id": "abbr-19",
+    "type": "typed",
+    "question": "What does the abbreviation “om” mean?",
+    "answer": "every morning",
+    "explanation": "om comes from the Latin ‘omne mane’, meaning every morning.",
+    "hook": "From Latin ‘omne mane’."
+  },
+  {
+    "id": "abbr-20",
+    "type": "typed",
+    "question": "What does the abbreviation “on” mean?",
+    "answer": "every night",
+    "explanation": "on comes from the Latin ‘omne nocte’, meaning every night.",
+    "hook": "From Latin ‘omne nocte’."
+  },
+  {
+    "id": "abbr-21",
+    "type": "typed",
+    "question": "What does the abbreviation “p.c.” mean?",
+    "answer": "after meals",
+    "explanation": "p.c. comes from the Latin ‘post cibum’, meaning after meals.",
+    "hook": "From Latin ‘post cibum’."
+  },
+  {
+    "id": "abbr-22",
+    "type": "typed",
+    "question": "What does the abbreviation “p.m.” mean?",
+    "answer": "evening or afternoon",
+    "explanation": "p.m. comes from the Latin ‘post meridiem’, meaning evening or afternoon.",
+    "hook": "From Latin ‘post meridiem’."
+  },
+  {
+    "id": "abbr-23",
+    "type": "typed",
+    "question": "What does the abbreviation “p.o.” mean?",
+    "answer": "by mouth or orally",
+    "explanation": "p.o. comes from the Latin ‘per os’, meaning by mouth or orally.",
+    "hook": "From Latin ‘per os’."
+  },
+  {
+    "id": "abbr-24",
+    "type": "typed",
+    "question": "What does the abbreviation “p.r.” mean?",
+    "answer": "by rectum",
+    "explanation": "p.r. comes from the Latin ‘per rectum’, meaning by rectum.",
+    "hook": "From Latin ‘per rectum’."
+  },
+  {
+    "id": "abbr-25",
+    "type": "typed",
+    "question": "What does the abbreviation “PRN, prn” mean?",
+    "answer": "as needed",
+    "explanation": "PRN, prn comes from the Latin ‘pro re nata’, meaning as needed.",
+    "hook": "From Latin ‘pro re nata’."
+  },
+  {
+    "id": "abbr-26",
+    "type": "typed",
+    "question": "What does the abbreviation “pulv.” mean?",
+    "answer": "powder",
+    "explanation": "pulv. comes from the Latin ‘pulvis’, meaning powder.",
+    "hook": "From Latin ‘pulvis’."
+  },
+  {
+    "id": "abbr-27",
+    "type": "typed",
+    "question": "What does the abbreviation “q” mean?",
+    "answer": "every",
+    "explanation": "q comes from the Latin ‘quaque’, meaning every.",
+    "hook": "From Latin ‘quaque’."
+  },
+  {
+    "id": "abbr-28",
+    "type": "typed",
+    "question": "What does the abbreviation “q.d.s.” mean?",
+    "answer": "four times a day",
+    "explanation": "q.d.s. comes from the Latin ‘quater die sumendus’, meaning four times a day.",
+    "hook": "From Latin ‘quater die sumendus’."
+  },
+  {
+    "id": "abbr-29",
+    "type": "typed",
+    "question": "What does the abbreviation “q.h.” mean?",
+    "answer": "every hour",
+    "explanation": "q.h. comes from the Latin ‘quaque hora’, meaning every hour.",
+    "hook": "From Latin ‘quaque hora’."
+  },
+  {
+    "id": "abbr-30",
+    "type": "typed",
+    "question": "What does the abbreviation “q.i.d.” mean?",
+    "answer": "four times a day",
+    "explanation": "q.i.d. comes from the Latin ‘quattuor in die’, meaning four times a day.",
+    "hook": "From Latin ‘quattuor in die’."
+  },
+  {
+    "id": "abbr-31",
+    "type": "typed",
+    "question": "What does the abbreviation “q.1h, q.1°” mean?",
+    "answer": "every 1 hour",
+    "explanation": "q.1h, q.1° comes from the Latin ‘quaque 1 hora’, meaning every 1 hour. The \"1\" can be replaced with any other number (e.g. q.4h = every 4 hours).",
+    "hook": "From Latin ‘quaque 1 hora’."
+  },
+  {
+    "id": "abbr-32",
+    "type": "typed",
+    "question": "What does the abbreviation “rep., rept.” mean?",
+    "answer": "repeats",
+    "explanation": "rep., rept. comes from the Latin ‘repetatur’, meaning repeats.",
+    "hook": "From Latin ‘repetatur’."
+  },
+  {
+    "id": "abbr-33",
+    "type": "typed",
+    "question": "What does the abbreviation “s” mean?",
+    "answer": "without",
+    "explanation": "s comes from the Latin ‘sine’, meaning without. It is usually written with a bar on top of the \"s\".",
+    "hook": "From Latin ‘sine’."
+  },
+  {
+    "id": "abbr-34",
+    "type": "typed",
+    "question": "What does the abbreviation “sig” mean?",
+    "answer": "write on label",
+    "explanation": "sig means write on label."
+  },
+  {
+    "id": "abbr-35",
+    "type": "typed",
+    "question": "What does the abbreviation “SL” mean?",
+    "answer": "sublingually, under the tongue",
+    "explanation": "SL means sublingually, under the tongue."
+  },
+  {
+    "id": "abbr-36",
+    "type": "typed",
+    "question": "What does the abbreviation “stat” mean?",
+    "answer": "immediately",
+    "explanation": "stat comes from the Latin ‘statim’, meaning immediately.",
+    "hook": "From Latin ‘statim’."
+  },
+  {
+    "id": "abbr-37",
+    "type": "typed",
+    "question": "What does the abbreviation “supp” mean?",
+    "answer": "suppository",
+    "explanation": "supp comes from the Latin ‘suppositorium’, meaning suppository.",
+    "hook": "From Latin ‘suppositorium’."
+  },
+  {
+    "id": "abbr-38",
+    "type": "typed",
+    "question": "What does the abbreviation “susp” mean?",
+    "answer": "suspension",
+    "explanation": "susp means suspension."
+  },
+  {
+    "id": "abbr-39",
+    "type": "typed",
+    "question": "What does the abbreviation “syr” mean?",
+    "answer": "syrup",
+    "explanation": "syr comes from the Latin ‘syrupus’, meaning syrup.",
+    "hook": "From Latin ‘syrupus’."
+  },
+  {
+    "id": "abbr-40",
+    "type": "typed",
+    "question": "What does the abbreviation “tab” mean?",
+    "answer": "tablet",
+    "explanation": "tab comes from the Latin ‘tabella’, meaning tablet.",
+    "hook": "From Latin ‘tabella’."
+  },
+  {
+    "id": "abbr-41",
+    "type": "typed",
+    "question": "What does the abbreviation “tbsp” mean?",
+    "answer": "tablespoon",
+    "explanation": "tbsp means tablespoon."
+  },
+  {
+    "id": "abbr-42",
+    "type": "typed",
+    "question": "What does the abbreviation “t.d.s.” mean?",
+    "answer": "three times a day",
+    "explanation": "t.d.s. comes from the Latin ‘ter die sumendum’, meaning three times a day.",
+    "hook": "From Latin ‘ter die sumendum’."
+  },
+  {
+    "id": "abbr-43",
+    "type": "typed",
+    "question": "What does the abbreviation “t.i.d.” mean?",
+    "answer": "three times a day",
+    "explanation": "t.i.d. comes from the Latin ‘ter in die’, meaning three times a day.",
+    "hook": "From Latin ‘ter in die’."
+  },
+  {
+    "id": "abbr-44",
+    "type": "typed",
+    "question": "What does the abbreviation “u.d., ut. dict.” mean?",
+    "answer": "as directed",
+    "explanation": "u.d., ut. dict. comes from the Latin ‘ut dictum’, meaning as directed.",
+    "hook": "From Latin ‘ut dictum’."
+  },
+  {
+    "id": "abbr-45",
+    "type": "typed",
+    "question": "What does the abbreviation “ung.” mean?",
+    "answer": "ointment",
+    "explanation": "ung. comes from the Latin ‘unguentum’, meaning ointment.",
+    "hook": "From Latin ‘unguentum’."
+  }
+]
