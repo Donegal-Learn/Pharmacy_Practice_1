@@ -1,0 +1,23 @@
+{
+  "appTitle": "Dispensary Ready",
+  "programme": "ATU Pharmacy Technician",
+  "moduleName": "Pharmacy Practice & Dispensary Computers",
+  "topics": [
+    { "id": "role", "name": "Your Role as a Technician", "file": "role.json", "icon": "\ud83e\ude7a" },
+    { "id": "regulators", "name": "Regulators, Medicines & Prescriptions", "file": "regulators.json", "icon": "\u2696\ufe0f" },
+    { "id": "controlled-drugs", "name": "Controlled Drugs", "file": "controlled-drugs.json", "icon": "\ud83d\udd12" },
+    { "id": "conduct", "name": "Code of Conduct & GDPR", "file": "conduct.json", "icon": "\ud83d\udcdc" },
+    { "id": "compliance", "name": "Labelling, Endorsing & Computer Codes", "file": "compliance.json", "icon": "\ud83c\udff7\ufe0f" },
+    { "id": "special-supply", "name": "Special Supply Scenarios", "file": "special-supply.json", "icon": "\ud83d\udea8" },
+    { "id": "emergency-other", "name": "Vaccines & Other Emergency Supply", "file": "emergency-other.json", "icon": "\ud83d\udc89" },
+    { "id": "unlicensed", "name": "Unlicensed Medicines (EMPs)", "file": "unlicensed.json", "icon": "\ud83c\udff3\ufe0f" },
+    { "id": "health-safety", "name": "Health & Safety", "file": "health-safety.json", "icon": "\u26a0\ufe0f" },
+    { "id": "sops", "name": "Standard Operating Procedures", "file": "sops.json", "icon": "\ud83d\udccb" },
+    { "id": "errors", "name": "Medication Error Management", "file": "errors.json", "icon": "\ud83d\udd0d" },
+    { "id": "reimbursement", "name": "Reimbursement Schemes", "file": "reimbursement.json", "icon": "\ud83d\udcb6" },
+    { "id": "month-end", "name": "Month-End Claiming", "file": "month-end.json", "icon": "\ud83d\uddd3\ufe0f" },
+    { "id": "calculations", "name": "Pharmacy Calculations", "file": "calculations.json", "icon": "\ud83e\uddee" },
+    { "id": "extemp", "name": "Extemporaneous Preparations", "file": "extemp.json", "icon": "\u2697\ufe0f" },
+    { "id": "abbreviations", "name": "Latin Abbreviations", "file": "abbreviations.json", "icon": "\ud83d\udcdd" }
+  ]
+}
