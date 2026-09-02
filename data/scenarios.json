@@ -1,0 +1,179 @@
+[
+  {
+    "id": "scn-emergency-patient",
+    "type": "scenario",
+    "title": "Emergency Supply: Patient Request",
+    "intro": "Saturday afternoon. Mrs. O'Brien is a regular patient — out of her Ramipril, her GP surgery is closed until Monday, and she has no prescription with her.",
+    "start": "n1",
+    "nodes": {
+      "n1": {
+        "text": "What do you need to establish first?",
+        "choices": [
+          { "label": "Whether this is a patient-request or prescriber-request emergency supply", "correct": true, "next": "n2", "feedback": "Right — the two routes have different rules (quantity limits, follow-up requirements), so classifying it correctly comes first." },
+          { "label": "Whether she can pay for it privately", "correct": false, "next": "fix1", "feedback": "Payment isn't the deciding factor here — the type of emergency supply request is." },
+          { "label": "Tell her to attend the out-of-hours GP service instead", "correct": false, "next": "fix1", "feedback": "For a routine repeat medication like this, an emergency supply from the pharmacy is the appropriate route." }
+        ]
+      },
+      "fix1": {
+        "text": "This is a patient-request emergency supply — Mrs. O'Brien is asking directly, with no prescriber involved yet.",
+        "choices": [ { "label": "Continue", "next": "n2" } ]
+      },
+      "n2": {
+        "text": "Confirmed: patient-request. What's the maximum quantity you can supply?",
+        "choices": [
+          { "label": "5 days' treatment", "correct": true, "next": "n3", "feedback": "Correct — 5 days is the general limit (exceptions include smallest pack of inhalers/creams, a full course of liquid antibiotics, or a full cycle of oral contraceptives)." },
+          { "label": "A full 30-day supply", "correct": false, "next": "fix2", "feedback": "30 days is too much for a patient-request supply — that's not the rule here." },
+          { "label": "Whatever amount she asks for", "correct": false, "next": "fix2", "feedback": "The quantity is capped by law, not set by the patient's request." }
+        ]
+      },
+      "fix2": {
+        "text": "The general rule for a patient-request emergency supply is a maximum of 5 days' treatment.",
+        "choices": [ { "label": "Continue", "next": "n3" } ]
+      },
+      "n3": {
+        "text": "You dispense 5 days' Ramipril. What must the label say?",
+        "choices": [
+          { "label": "'Emergency Supply' clearly stated", "correct": true, "next": "end", "feedback": "Correct — any emergency supply must be clearly labelled as such." },
+          { "label": "Nothing different from a normal label", "correct": false, "next": "fix3", "feedback": "The label must flag this as an emergency supply so anyone handling the medicine afterwards knows the circumstances." }
+        ]
+      },
+      "fix3": {
+        "text": "Every emergency supply label must clearly state 'Emergency Supply'.",
+        "choices": [ { "label": "Continue", "next": "end" } ]
+      },
+      "end": {
+        "text": "Handled correctly. Because this was a patient request (not a prescriber request), there's no legal requirement for a follow-up prescription — though it's good practice to encourage Mrs. O'Brien to see her GP for a proper repeat.",
+        "end": true
+      }
+    }
+  },
+  {
+    "id": "scn-emergency-prescriber",
+    "type": "scenario",
+    "title": "Emergency Supply: Prescriber Request",
+    "intro": "A GP phones the pharmacy directly on a Friday evening: a patient needs their epilepsy medication started urgently, but the GP can't get a paper prescription to you until Monday.",
+    "start": "n1",
+    "nodes": {
+      "n1": {
+        "text": "What must the GP do as part of requesting this emergency supply?",
+        "choices": [
+          { "label": "Undertake to provide a valid prescription within 72 hours", "correct": true, "next": "n2", "feedback": "Correct — the prescriber must undertake to supply a valid prescription within 72 hours of the request." },
+          { "label": "Just email a photo of a prescription pad", "correct": false, "next": "fix1", "feedback": "A photo isn't sufficient — a valid prescription must still follow within the set timeframe." },
+          { "label": "Nothing further, once they've phoned", "correct": false, "next": "fix1", "feedback": "The phone request must still be followed up with a valid prescription within the set timeframe." }
+        ]
+      },
+      "fix1": {
+        "text": "The rule: the prescriber must undertake to supply a valid prescription within 72 hours of requesting the emergency supply.",
+        "choices": [ { "label": "Continue", "next": "n2" } ]
+      },
+      "n2": {
+        "text": "Four days pass and the GP still hasn't sent the prescription. What's the significance of the 72-hour window here?",
+        "choices": [
+          { "label": "It's been breached — the prescriber failed their undertaking, and that should be followed up", "correct": true, "next": "n3", "feedback": "Correct. Once that window passes without the promised prescription, it's a compliance issue on the prescriber's side worth following up." },
+          { "label": "It doesn't matter, as long as the patient got their medicine", "correct": false, "next": "fix2", "feedback": "Supplying the medicine doesn't remove the prescriber's obligation to send the follow-up prescription." }
+        ]
+      },
+      "fix2": {
+        "text": "The 72-hour undertaking is a real obligation — if it's missed, it should be followed up.",
+        "choices": [ { "label": "Continue", "next": "n3" } ]
+      },
+      "n3": {
+        "text": "What must the label on this supply say?",
+        "choices": [
+          { "label": "'Emergency Supply'", "correct": true, "next": "end", "feedback": "Correct — this applies to all emergency supplies, patient or prescriber request." },
+          { "label": "The GP's undertaking reference number", "correct": false, "next": "fix3", "feedback": "There's no such reference number requirement — the label just needs to say 'Emergency Supply'." }
+        ]
+      },
+      "fix3": {
+        "text": "The label requirement is simply 'Emergency Supply', clearly stated.",
+        "choices": [ { "label": "Continue", "next": "end" } ]
+      },
+      "end": {
+        "text": "Handled correctly. Prescriber-request emergency supplies hinge on that 72-hour undertaking — track it, and follow up if it's missed.",
+        "end": true
+      }
+    }
+  },
+  {
+    "id": "scn-naloxone",
+    "type": "scenario",
+    "title": "Naloxone Without a Prescription",
+    "intro": "A distressed man rushes into the pharmacy saying his friend has collapsed outside and he thinks it's an overdose. He's heard the pharmacy might have something that can help immediately.",
+    "start": "n1",
+    "nodes": {
+      "n1": {
+        "text": "Can you supply and administer Naloxone here without a prescription?",
+        "choices": [
+          { "label": "Yes, if you're a trained pharmacist and this matches its approved use", "correct": true, "next": "n2", "feedback": "Correct — trained pharmacists can supply Naloxone without a prescription, but only for its approved indication." },
+          { "label": "No, Naloxone always requires a prescription", "correct": false, "next": "fix1", "feedback": "Naloxone is one of the medicines a trained pharmacist can supply without a prescription — training is the requirement, not a prescription." }
+        ]
+      },
+      "fix1": {
+        "text": "A trained pharmacist can supply Naloxone without a prescription, for its approved indication.",
+        "choices": [ { "label": "Continue", "next": "n2" } ]
+      },
+      "n2": {
+        "text": "What is Naloxone actually indicated for in this without-prescription pathway?",
+        "choices": [
+          { "label": "Respiratory depression from known or suspected narcotic overdose", "correct": true, "next": "n3", "feedback": "Correct — that's specifically what it covers." },
+          { "label": "Any kind of collapse or medical emergency", "correct": false, "next": "fix2", "feedback": "It's specific to respiratory depression from narcotic overdose — not a general emergency medicine for any collapse." }
+        ]
+      },
+      "fix2": {
+        "text": "Naloxone (without prescription) is specifically for respiratory depression from known or suspected narcotic overdose.",
+        "choices": [ { "label": "Continue", "next": "n3" } ]
+      },
+      "n3": {
+        "text": "Before any of this applies, what must be true of the pharmacist supplying it?",
+        "choices": [
+          { "label": "They must have completed PSI-approved training", "correct": true, "next": "end", "feedback": "Correct — this without-prescription supply route only applies once the pharmacist has completed the required training." },
+          { "label": "Nothing — any registered pharmacist can do this automatically", "correct": false, "next": "fix3", "feedback": "Training is required first — it's not automatic for every registered pharmacist." }
+        ]
+      },
+      "fix3": {
+        "text": "PSI-approved training is required before a pharmacist can supply Naloxone this way.",
+        "choices": [ { "label": "Continue", "next": "end" } ]
+      },
+      "end": {
+        "text": "If your pharmacy has a trained pharmacist on duty, Naloxone can be supplied for this indication without delay. If not, this becomes a 999 / emergency services situation instead.",
+        "end": true
+      }
+    }
+  },
+  {
+    "id": "scn-nurse-scope",
+    "type": "scenario",
+    "title": "A Prescription Outside Scope?",
+    "intro": "A prescription arrives from a nurse prescriber for a medicine that seems unusual for their typical area of practice — you're not sure it's within their scope.",
+    "start": "n1",
+    "nodes": {
+      "n1": {
+        "text": "What's the correct first response?",
+        "choices": [
+          { "label": "Verify the prescription's validity — e.g. contact the prescriber or their collaborating doctor", "correct": true, "next": "n2", "feedback": "Correct — this is the professional obligation: verify, don't assume." },
+          { "label": "Refuse to dispense it automatically", "correct": false, "next": "fix1", "feedback": "Automatic refusal isn't correct either — you're expected to verify first, not reject outright." },
+          { "label": "Dispense it anyway without question", "correct": false, "next": "fix1", "feedback": "Dispensing without checking skips your professional obligation to verify validity." }
+        ]
+      },
+      "fix1": {
+        "text": "The correct step is always to verify — e.g. by contacting the prescriber or their collaborating doctor — rather than assuming either way.",
+        "choices": [ { "label": "Continue", "next": "n2" } ]
+      },
+      "n2": {
+        "text": "You contact the prescriber and they confirm it's within their scope and clinically appropriate. What now?",
+        "choices": [
+          { "label": "Proceed with dispensing as normal", "correct": true, "next": "end", "feedback": "Correct — once validity is confirmed, there's no remaining barrier to dispensing." },
+          { "label": "Still refuse, just to be safe", "correct": false, "next": "fix2", "feedback": "Once you've verified and it checks out, refusing anyway isn't warranted or professional." }
+        ]
+      },
+      "fix2": {
+        "text": "Once verification confirms the prescription is valid and appropriate, it should be dispensed as normal.",
+        "choices": [ { "label": "Continue", "next": "end" } ]
+      },
+      "end": {
+        "text": "Verification — not automatic refusal or automatic compliance — is the professional standard whenever a prescription looks outside a prescriber's typical scope.",
+        "end": true
+      }
+    }
+  }
+]

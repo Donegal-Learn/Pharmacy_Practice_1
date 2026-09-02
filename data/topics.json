@@ -1,0 +1,109 @@
+{
+  "appTitle": "Dispensary Ready",
+  "programme": "ATU Pharmacy Technician",
+  "moduleName": "Pharmacy Practice & Dispensary Computers",
+  "topics": [
+    {
+      "id": "role",
+      "name": "Your Role as a Technician",
+      "file": "role.json",
+      "icon": "🩺"
+    },
+    {
+      "id": "regulators",
+      "name": "Regulators, Medicines & Prescriptions",
+      "file": "regulators.json",
+      "icon": "⚖️"
+    },
+    {
+      "id": "controlled-drugs",
+      "name": "Controlled Drugs",
+      "file": "controlled-drugs.json",
+      "icon": "🔒"
+    },
+    {
+      "id": "conduct",
+      "name": "Code of Conduct & GDPR",
+      "file": "conduct.json",
+      "icon": "📜"
+    },
+    {
+      "id": "compliance",
+      "name": "Labelling, Endorsing & Computer Codes",
+      "file": "compliance.json",
+      "icon": "🏷️"
+    },
+    {
+      "id": "special-supply",
+      "name": "Special Supply Scenarios",
+      "file": "special-supply.json",
+      "icon": "🚨"
+    },
+    {
+      "id": "emergency-other",
+      "name": "Vaccines & Other Emergency Supply",
+      "file": "emergency-other.json",
+      "icon": "💉"
+    },
+    {
+      "id": "unlicensed",
+      "name": "Unlicensed Medicines (EMPs)",
+      "file": "unlicensed.json",
+      "icon": "🏳️"
+    },
+    {
+      "id": "health-safety",
+      "name": "Health & Safety",
+      "file": "health-safety.json",
+      "icon": "⚠️"
+    },
+    {
+      "id": "sops",
+      "name": "Standard Operating Procedures",
+      "file": "sops.json",
+      "icon": "📋"
+    },
+    {
+      "id": "errors",
+      "name": "Medication Error Management",
+      "file": "errors.json",
+      "icon": "🔍"
+    },
+    {
+      "id": "reimbursement",
+      "name": "Reimbursement Schemes",
+      "file": "reimbursement.json",
+      "icon": "💶"
+    },
+    {
+      "id": "month-end",
+      "name": "Month-End Claiming",
+      "file": "month-end.json",
+      "icon": "🗓️"
+    },
+    {
+      "id": "calculations",
+      "name": "Pharmacy Calculations",
+      "file": "calculations.json",
+      "icon": "🧮"
+    },
+    {
+      "id": "extemp",
+      "name": "Extemporaneous Preparations",
+      "file": "extemp.json",
+      "icon": "⚗️"
+    },
+    {
+      "id": "abbreviations",
+      "name": "Latin Abbreviations",
+      "file": "abbreviations.json",
+      "icon": "📝"
+    },
+    {
+      "id": "scenarios",
+      "name": "Special Supply Scenarios (Simulator)",
+      "file": "scenarios.json",
+      "icon": "🧭"
+    }
+  ]
+}
