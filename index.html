@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Dispensary Ready — ATU Pharmacy Technician Study App</title>
+<style>
+:root{
+  --navy:#001a79;
+  --navy-dark:#00114f;
+  --orange:#ff791e;
+  --lightblue:#7bb9cb;
+  --green:#005b5e;
+  --gold:#d7b463;
+  --sand:#fac8b4;
+  --warmgrey:#c8bebf;
+  --white:#ffffff;
+  --ink:#0e1430;
+  --paper:#f6f7fb;
+  --card:#ffffff;
+  --line:#e2e5f0;
+  --radius:14px;
+  --shadow:0 10px 30px rgba(0,26,121,0.10);
+  font-size:16px;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  font-family:"Halyard Text","Segoe UI",Inter,system-ui,-apple-system,sans-serif;
+  background:
+    radial-gradient(1200px 600px at 100% -10%, rgba(123,185,203,0.20), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(255,121,30,0.10), transparent 55%),
+    var(--paper);
+  color:var(--ink);
+  min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{
+  font-family:"Halyard Display","Segoe UI",Inter,system-ui,-apple-system,sans-serif;
+  font-weight:700;
+  margin:0 0 .4em 0;
+  letter-spacing:-0.01em;
+}
+button{font-family:inherit;}
+.app{max-width:760px;margin:0 auto;padding:0 16px 90px;}
+
+/* ---------- Header ---------- */
+.topbar{
+  background:var(--navy);
+  color:#fff;
+  padding:14px 16px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  position:sticky;
+  top:0;
+  z-index:50;
+  box-shadow:0 4px 18px rgba(0,17,79,0.25);
+}
+.topbar .wordmark{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex:1;
+  min-width:0;
+}
+.atu-icon{height:32px;width:auto;flex-shrink:0;display:block;}
+.wordmark-text{display:flex;flex-direction:column;line-height:1.05;min-width:0;}
+.wordmark-text .title{font-family:"Halyard Display",sans-serif;font-weight:700;font-size:1.02rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.wordmark-text .subtitle{font-size:.68rem;color:var(--lightblue);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.top-stats{display:flex;gap:10px;flex-shrink:0;}
+.stat-pill{
+  background:rgba(255,255,255,0.10);
+  border:1px solid rgba(255,255,255,0.18);
+  border-radius:999px;
+  padding:5px 10px;
+  font-size:.78rem;
+  display:flex;
+  align-items:center;
+  gap:5px;
+  white-space:nowrap;
+}
+.stat-pill b{font-weight:700;}
+.nav-tabs{
+  display:flex;
+  gap:4px;
+  padding:8px 16px 0;
+  max-width:760px;
+  margin:0 auto;
+  overflow-x:auto;
+}
+.nav-tab{
+  border:none;
+  background:transparent;
+  color:var(--navy);
+  opacity:.55;
+  font-weight:600;
+  font-size:.85rem;
+  padding:10px 12px;
+  cursor:pointer;
+  border-bottom:3px solid transparent;
+  white-space:nowrap;
+}
+.nav-tab.active{opacity:1;border-bottom-color:var(--orange);}
+
+/* ---------- Sections ---------- */
+.section{padding-top:18px;}
+.hidden{display:none !important;}
+
+/* Home */
+.hero-card{
+  background:linear-gradient(135deg,var(--navy) 0%, #0a2a9a 60%, var(--green) 130%);
+  color:#fff;
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:var(--shadow);
+  position:relative;
+  overflow:hidden;
+}
+.hero-card::after{
+  content:"";
+  position:absolute;
+  right:-40px;bottom:-60px;
+  width:180px;height:180px;
+  background:radial-gradient(circle,var(--orange) 0%, transparent 70%);
+  opacity:.35;
+}
+.hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
+.mastery-ring{position:relative;width:84px;height:84px;flex-shrink:0;}
+.mastery-ring svg{transform:rotate(-90deg);}
+.mastery-ring .val{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.15rem;}
+.hero-tier{font-size:.78rem;color:var(--lightblue);font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;}
+.hero-stats{display:flex;gap:18px;margin-top:16px;flex-wrap:wrap;}
+.hero-stat b{display:block;font-size:1.3rem;font-family:"Halyard Display",sans-serif;}
+.hero-stat span{font-size:.72rem;opacity:.8;}
+
+.cta-row{display:flex;gap:10px;margin-top:16px;}
+.btn{
+  border:none;
+  border-radius:10px;
+  padding:12px 16px;
+  font-weight:700;
+  font-size:.92rem;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.btn-primary{background:var(--orange);color:#fff;flex:1;}
+.btn-primary:active{filter:brightness(.92);}
+.btn-secondary{background:rgba(255,255,255,0.14);color:#fff;border:1px solid rgba(255,255,255,0.3);}
+.btn-ghost{background:transparent;border:1.5px solid var(--navy);color:var(--navy);}
+.btn-block{width:100%;}
+.btn:disabled{opacity:.45;cursor:not-allowed;}
+
+.section-title{font-size:.92rem;text-transform:uppercase;letter-spacing:.05em;color:var(--navy);opacity:.65;margin:22px 0 10px;font-weight:700;}
+
+.topic-grid{display:flex;flex-direction:column;gap:8px;}
+.topic-row{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:12px 14px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.topic-row .icon{font-size:1.3rem;width:32px;text-align:center;flex-shrink:0;}
+.topic-row .meta{flex:1;min-width:0;}
+.topic-row .meta .name{font-weight:700;font-size:.92rem;}
+.topic-row .meta .bar-wrap{background:var(--line);height:6px;border-radius:4px;margin-top:6px;overflow:hidden;}
+.topic-row .meta .bar{height:100%;background:var(--lightblue);border-radius:4px;}
+.topic-row .meta .sub{font-size:.72rem;color:#5a5f78;margin-top:4px;}
+.toggle{
+  width:42px;height:24px;border-radius:999px;background:var(--warmgrey);position:relative;flex-shrink:0;cursor:pointer;border:none;
+  transition:background .15s;
+}
+.toggle.on{background:var(--green);}
+.toggle .knob{position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:#fff;transition:left .15s;box-shadow:0 1px 3px rgba(0,0,0,.3);}
+.toggle.on .knob{left:20px;}
+
+.filter-row{display:flex;gap:8px;margin-bottom:10px;}
+.chip{
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:999px;
+  padding:8px 14px;
+  font-size:.8rem;
+  font-weight:600;
+  color:var(--navy);
+  cursor:pointer;
+}
+.chip.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* Study view */
+.progress-bar-outer{background:var(--line);border-radius:999px;height:8px;margin:14px 0;overflow:hidden;}
+.progress-bar-inner{background:var(--orange);height:100%;border-radius:999px;transition:width .2s;}
+.study-meta{display:flex;justify-content:space-between;font-size:.78rem;color:#5a5f78;margin-bottom:2px;}
+
+.card{
+  background:var(--card);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  padding:22px;
+  min-height:220px;
+  display:flex;
+  flex-direction:column;
+}
+.card .tag{
+  align-self:flex-start;
+  background:rgba(123,185,203,.25);
+  color:var(--navy);
+  font-size:.68rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  padding:4px 10px;
+  border-radius:999px;
+  margin-bottom:12px;
+}
+.card .question{font-size:1.12rem;font-weight:700;line-height:1.4;font-family:"Halyard Display",sans-serif;}
+.mc-options{display:flex;flex-direction:column;gap:10px;margin-top:18px;}
+.mc-option{
+  text-align:left;
+  border:1.5px solid var(--line);
+  background:#fff;
+  border-radius:10px;
+  padding:12px 14px;
+  font-size:.92rem;
+  cursor:pointer;
+  color:var(--ink);
+}
+.mc-option.correct{border-color:var(--green);background:rgba(0,91,94,0.08);}
+.mc-option.wrong{border-color:#c0392b;background:rgba(192,57,43,0.08);}
+.mc-option:disabled{cursor:default;}
+
+.typed-wrap{margin-top:18px;}
+.typed-wrap input{
+  width:100%;
+  padding:13px 14px;
+  border:1.5px solid var(--line);
+  border-radius:10px;
+  font-size:1rem;
+  font-family:inherit;
+}
+.typed-wrap input:focus{outline:2px solid var(--lightblue);border-color:var(--lightblue);}
+
+.feedback-box{
+  margin-top:16px;
+  border-radius:12px;
+  padding:14px;
+  font-size:.88rem;
+  line-height:1.5;
+}
+.feedback-box.good{background:rgba(0,91,94,0.08);border:1px solid rgba(0,91,94,0.25);}
+.feedback-box.bad{background:rgba(192,57,43,0.08);border:1px solid rgba(192,57,43,0.25);}
+.feedback-box .verdict{font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:6px;}
+.feedback-box .correct-answer{font-weight:600;margin-bottom:6px;}
+.feedback-box .hook{margin-top:8px;font-style:italic;color:var(--navy);opacity:.85;}
+
+.card-actions{margin-top:auto;padding-top:18px;display:flex;gap:10px;}
+
+/* Flashcard */
+.flash{
+  background:var(--card);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  padding:26px;
+  min-height:260px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  cursor:pointer;
+  position:relative;
+}
+.flash .tag{
+  position:absolute;top:16px;left:16px;
+  background:rgba(123,185,203,.25);color:var(--navy);font-size:.68rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.04em;padding:4px 10px;border-radius:999px;
+}
+.flash .flip-hint{position:absolute;top:16px;right:16px;font-size:.7rem;color:#8a8fa8;}
+.flash .content{font-size:1.08rem;line-height:1.5;font-weight:600;text-align:center;}
+.flash .content.answer{font-weight:400;font-size:1rem;}
+.flash .divider{height:1px;background:var(--line);margin:16px 0;}
+.flash .explain{font-size:.86rem;color:#4a4f66;text-align:left;}
+.flash .hook{font-size:.82rem;font-style:italic;color:var(--navy);margin-top:10px;text-align:left;}
+
+.grade-row{display:flex;gap:8px;margin-top:18px;}
+.grade-btn{flex:1;border:none;border-radius:10px;padding:13px 6px;font-weight:700;font-size:.82rem;color:#fff;cursor:pointer;}
+.grade-again{background:#c0392b;}
+.grade-hard{background:var(--orange);}
+.grade-good{background:var(--lightblue);color:var(--navy);}
+.grade-easy{background:var(--green);}
+
+/* Empty state */
+.empty-state{
+  text-align:center;
+  padding:60px 20px;
+  color:#5a5f78;
+}
+.empty-state .icon{font-size:2.4rem;margin-bottom:10px;}
+
+/* Settings */
+.settings-block{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:12px;}
+.settings-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);}
+.settings-row:last-child{border-bottom:none;}
+.settings-row .label{font-weight:600;font-size:.9rem;}
+.settings-row .desc{font-size:.75rem;color:#5a5f78;margin-top:2px;}
+.danger-btn{background:#c0392b;color:#fff;border:none;border-radius:10px;padding:12px;font-weight:700;width:100%;cursor:pointer;}
+
+/* Bottom nav */
+.bottom-nav{
+  position:fixed;bottom:0;left:0;right:0;
+  background:#fff;
+  border-top:1px solid var(--line);
+  display:flex;
+  padding:6px 6px calc(env(safe-area-inset-bottom,0px) + 6px);
+  z-index:60;
+  box-shadow:0 -6px 20px rgba(0,26,121,0.08);
+}
+.bnav-btn{
+  flex:1;
+  background:none;border:none;
+  display:flex;flex-direction:column;align-items:center;gap:3px;
+  padding:8px 4px;
+  color:#8a8fa8;
+  font-size:.66rem;
+  font-weight:600;
+  cursor:pointer;
+}
+.bnav-btn .ic{font-size:1.25rem;}
+.bnav-btn.active{color:var(--navy);}
+
+.confirm-overlay{
+  position:fixed;inset:0;background:rgba(0,17,79,0.5);
+  display:flex;align-items:center;justify-content:center;z-index:100;padding:20px;
+}
+.confirm-box{background:#fff;border-radius:16px;padding:22px;max-width:340px;width:100%;}
+.confirm-box p{font-size:.9rem;color:#3a3f56;margin-bottom:18px;}
+.confirm-actions{display:flex;gap:10px;}
+.confirm-actions button{flex:1;}
+
+@media(min-width:520px){
+  .top-stats{gap:14px;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wordmark">
+    <img class="atu-icon" src="data:image/png;base64,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" alt="ATU">
+    <div class="wordmark-text">
+      <span class="title" id="app-title">Dispensary Ready</span>
+      <span class="subtitle" id="app-subtitle">ATU Pharmacy Technician</span>
+    </div>
+  </div>
+  <div class="top-stats">
+    <span class="stat-pill">🔥 <b id="streak-pill">0</b></span>
+    <span class="stat-pill">⭐ <b id="mastery-pill">0%</b></span>
+  </div>
+</div>
+
+<div class="nav-tabs">
+  <button class="nav-tab active" data-view="home">Home</button>
+  <button class="nav-tab" data-view="settings">Settings</button>
+</div>
+
+<div class="app">
+
+  <!-- HOME -->
+  <section id="view-home" class="section">
+    <div class="hero-card">
+      <div class="hero-top">
+        <div>
+          <h2 style="color:#fff;">Welcome back</h2>
+          <div class="hero-tier" id="dreyfus-tier">Novice</div>
+        </div>
+        <div class="mastery-ring">
+          <svg width="84" height="84">
+            <circle cx="42" cy="42" r="36" stroke="rgba(255,255,255,0.25)" stroke-width="8" fill="none"/>
+            <circle id="ring-progress" cx="42" cy="42" r="36" stroke="#ff791e" stroke-width="8" fill="none" stroke-linecap="round" stroke-dasharray="226" stroke-dashoffset="226"/>
+          </svg>
+          <div class="val" id="ring-val">0%</div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><b id="stat-due">0</b><span>Ready to review</span></div>
+        <div class="hero-stat"><b id="stat-total">0</b><span>Active cards</span></div>
+        <div class="hero-stat"><b id="stat-streak">0</b><span>Day streak</span></div>
+      </div>
+      <div class="cta-row">
+        <button class="btn btn-primary" id="btn-start-quiz">▶ Start Quiz Session</button>
+      </div>
+      <div class="cta-row">
+        <button class="btn btn-secondary btn-block" id="btn-start-flash">🗂️ Flashcard Review</button>
+      </div>
+    </div>
+
+    <div class="section-title" style="display:flex;align-items:center;justify-content:space-between;">
+      <span>Your topics</span>
+      <span style="display:flex;gap:6px;">
+        <button class="chip" id="btn-all-on">All on</button>
+        <button class="chip" id="btn-all-off">All off</button>
+      </span>
+    </div>
+    <div class="topic-grid" id="home-topic-list"></div>
+  </section>
+
+  <!-- STUDY (quiz) -->
+  <section id="view-study" class="section hidden">
+    <div class="study-meta">
+      <span id="study-progress-label">Card 1 of 10</span>
+      <span id="study-box-label"></span>
+    </div>
+    <div class="progress-bar-outer"><div class="progress-bar-inner" id="study-progress-bar" style="width:0%"></div></div>
+    <div class="card" id="quiz-card"></div>
+  </section>
+
+  <!-- FLASHCARDS -->
+  <section id="view-flash" class="section hidden">
+    <div class="study-meta">
+      <span id="flash-progress-label">Card 1 of 10</span>
+    </div>
+    <div class="progress-bar-outer"><div class="progress-bar-inner" id="flash-progress-bar" style="width:0%"></div></div>
+    <div class="flash" id="flash-card"></div>
+  </section>
+
+  <!-- SESSION COMPLETE -->
+  <section id="view-complete" class="section hidden">
+    <div class="hero-card" style="text-align:center;">
+      <div style="font-size:2.6rem;">🎉</div>
+      <h2 style="color:#fff;">Session complete!</h2>
+      <p style="color:rgba(255,255,255,0.85);font-size:.9rem;" id="complete-summary"></p>
+      <div class="cta-row"><button class="btn btn-primary btn-block" id="btn-back-home">Back to Home</button></div>
+    </div>
+  </section>
+
+  <!-- SETTINGS -->
+  <section id="view-settings" class="section hidden">
+    <div class="settings-block">
+      <div class="settings-row">
+        <div><div class="label">Study streak</div><div class="desc" id="settings-streak-desc">0 days</div></div>
+      </div>
+      <div class="settings-row">
+        <div><div class="label">Overall mastery</div><div class="desc" id="settings-mastery-desc">0%</div></div>
+      </div>
+      <div class="settings-row">
+        <div><div class="label">Total cards studied</div><div class="desc" id="settings-total-desc">0</div></div>
+      </div>
+    </div>
+    <div class="settings-block">
+      <div class="settings-row">
+        <div>
+          <div class="label">Reset all progress</div>
+          <div class="desc">Clears streaks, mastery, and spaced-repetition history on this device</div>
+        </div>
+      </div>
+      <button class="danger-btn" id="btn-reset" style="margin-top:6px;">Reset Progress</button>
+    </div>
+    <p style="text-align:center;font-size:.72rem;color:#8a8fa8;margin-top:20px;" id="settings-footer">Atlantic Technological University<br>Progress is stored only on this device.</p>
+  </section>
+
+</div>
+
+<div class="bottom-nav">
+  <button class="bnav-btn active" data-view="home"><span class="ic">🏠</span>Home</button>
+  <button class="bnav-btn" data-view="settings"><span class="ic">⚙️</span>Settings</button>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ============ STORAGE ABSTRACTION ============ */
+const StorageAPI = {
+  async get(key){
+    try{
+      if (window.storage && window.storage.get){
+        const r = await window.storage.get(key, false);
+        return r ? r.value : null;
+      }
+    }catch(e){ /* fall through to localStorage */ }
+    return localStorage.getItem(key);
+  },
+  async set(key, value){
+    try{
+      if (window.storage && window.storage.set){
+        await window.storage.set(key, value, false);
+        return;
+      }
+    }catch(e){ /* fall through */ }
+    localStorage.setItem(key, value);
+  },
+  async delete(key){
+    try{
+      if (window.storage && window.storage.delete){
+        await window.storage.delete(key, false);
+        return;
+      }
+    }catch(e){}
+    localStorage.removeItem(key);
+  }
+};
+
+const PROGRESS_KEY = "dispensary-ready:progress:v1";
+/* ============ STATE ============ */
+let TOPICS = [];         // from topics.json
+let CARD_BANK = {};      // topicId -> [cards]
+let PROGRESS = null;     // persisted progress object
+let currentSession = null; // {mode:'quiz'|'flash', queue:[cards], index, correctCount}
+
+/* ============ PROGRESS MODEL ============
+progress = {
+  streak: {count, lastActiveDate},
+  topicEnabled: {topicId: bool},
+  cardState: {
+    cardId: {box:1-5, dueAt: timestamp, seen:0, correct:0}
+  },
+  totalAnswered: 0
+}
+*/
+
+function defaultProgress(){
+  return {
+    streak: {count:0, lastActiveDate:null},
+    topicEnabled: {},
+    cardState: {},
+    totalAnswered: 0
+  };
+}
+
+async function loadProgress(){
+  const raw = await StorageAPI.get(PROGRESS_KEY);
+  if (raw){
+    try { PROGRESS = JSON.parse(raw); } catch(e){ PROGRESS = defaultProgress(); }
+  } else {
+    PROGRESS = defaultProgress();
+  }
+  if (!PROGRESS.streak) PROGRESS.streak = {count:0,lastActiveDate:null};
+  if (!PROGRESS.topicEnabled) PROGRESS.topicEnabled = {};
+  if (!PROGRESS.cardState) PROGRESS.cardState = {};
+  if (typeof PROGRESS.totalAnswered !== "number") PROGRESS.totalAnswered = 0;
+}
+
+async function saveProgress(){
+  await StorageAPI.set(PROGRESS_KEY, JSON.stringify(PROGRESS));
+}
+
+/* ============ DATA LOADING ============ */
+async function loadData(){
+  const topicsRes = await fetch("data/topics.json");
+  const topicsJson = await topicsRes.json();
+  TOPICS = topicsJson.topics;
+
+  const appTitle = topicsJson.appTitle || "Study App";
+  const programme = topicsJson.programme || "";
+  const moduleName = topicsJson.moduleName || "";
+
+  document.title = [appTitle, programme, moduleName].filter(Boolean).join(" — ");
+  const titleEl = document.getElementById("app-title");
+  const subtitleEl = document.getElementById("app-subtitle");
+  if (titleEl) titleEl.textContent = appTitle;
+  // module name is the most useful thing to show day-to-day (once you're
+  // running more than one of these apps for different modules), so it takes
+  // the single subtitle line; programme name lives in the page <title> instead.
+  if (subtitleEl) subtitleEl.textContent = moduleName || programme;
+  const footerEl = document.getElementById("settings-footer");
+  if (footerEl){
+    const programmeNoAcronym = programme.startsWith("ATU ") ? programme.slice(4) : programme;
+    const parts = ["Atlantic Technological University", programmeNoAcronym, moduleName].filter(Boolean);
+    footerEl.innerHTML = parts.join(" \u00b7 ") + "<br>Progress is stored only on this device.";
+  }
+
+  for (const t of TOPICS){
+    const res = await fetch("data/" + t.file);
+    const cards = await res.json();
+    cards.forEach(c => { c.topicId = t.id; });
+    CARD_BANK[t.id] = cards;
+    if (!(t.id in PROGRESS.topicEnabled)) PROGRESS.topicEnabled[t.id] = true;
+  }
+}
+
+/* ============ LEITNER SRS ============ */
+const BOX_INTERVAL_MS = {
+  1: 0,                       // due immediately
+  2: 1000*60*60*8,            // 8 hours
+  3: 1000*60*60*24,           // 1 day
+  4: 1000*60*60*24*3,         // 3 days
+  5: 1000*60*60*24*7          // 7 days
+};
+
+function getCardState(cardId){
+  if (!PROGRESS.cardState[cardId]){
+    PROGRESS.cardState[cardId] = {box:1, dueAt:0, seen:0, correct:0};
+  }
+  return PROGRESS.cardState[cardId];
+}
+
+function isCardActive(cardId){
+  const st = PROGRESS.cardState[cardId];
+  return !!(st && st.seen > 0);
+}
+
+function recordAnswer(cardId, wasCorrect){
+  const st = getCardState(cardId);
+  st.seen += 1;
+  if (wasCorrect){
+    st.correct += 1;
+    st.box = Math.min(5, st.box + 1);
+  } else {
+    st.box = 1;
+  }
+  st.dueAt = Date.now() + BOX_INTERVAL_MS[st.box];
+  PROGRESS.totalAnswered += 1;
+}
+
+function recordFlashGrade(cardId, grade){
+  // grade: 'again'|'hard'|'good'|'easy'
+  const st = getCardState(cardId);
+  st.seen += 1;
+  if (grade === "again"){ st.box = 1; st.correct += 0; }
+  else if (grade === "hard"){ st.box = Math.max(1, st.box); st.correct += 0.5; }
+  else if (grade === "good"){ st.box = Math.min(5, st.box+1); st.correct += 1; }
+  else if (grade === "easy"){ st.box = Math.min(5, st.box+2); st.correct += 1; }
+  st.dueAt = Date.now() + (BOX_INTERVAL_MS[st.box] || 0);
+  PROGRESS.totalAnswered += 1;
+}
+
+/* ============ ACTIVE POOL ============ */
+function getRelevantTopicIds(){
+  return TOPICS.filter(t => PROGRESS.topicEnabled[t.id] !== false).map(t => t.id);
+}
+
+function getAllRelevantCards(){
+  const ids = getRelevantTopicIds();
+  let out = [];
+  ids.forEach(id => { out = out.concat(CARD_BANK[id] || []); });
+  return out;
+}
+
+function getDueCards(){
+  const now = Date.now();
+  return getAllRelevantCards().filter(c => {
+    const st = PROGRESS.cardState[c.id];
+    if (!st) return true; // never seen = due
+    return st.dueAt <= now;
+  });
+}
+
+/* ============ MASTERY CALC ============ */
+function computeMastery(){
+  const cards = getAllRelevantCards();
+  if (cards.length === 0) return 0;
+  let sum = 0;
+  cards.forEach(c => {
+    const st = PROGRESS.cardState[c.id];
+    const box = st ? st.box : 1;
+    const seen = st ? st.seen : 0;
+    // unseen cards contribute 0; box 1-5 maps to 0-100% in steps, but only counts once seen at least once meaningfully
+    const frac = seen > 0 ? (box-1)/4 : 0;
+    sum += frac;
+  });
+  return Math.round((sum / cards.length) * 100);
+}
+
+function dreyfusTier(pct){
+  if (pct < 15) return "Novice";
+  if (pct < 35) return "Advanced Beginner";
+  if (pct < 55) return "Competent";
+  if (pct < 75) return "Proficient";
+  if (pct < 92) return "Expert";
+  return "Master";
+}
+
+function topicMastery(topicId){
+  const cards = CARD_BANK[topicId] || [];
+  if (cards.length === 0) return 0;
+  let sum = 0;
+  cards.forEach(c=>{
+    const st = PROGRESS.cardState[c.id];
+    const box = st ? st.box : 1;
+    const seen = st ? st.seen : 0;
+    sum += seen>0 ? (box-1)/4 : 0;
+  });
+  return Math.round((sum/cards.length)*100);
+}
+
+/* ============ STREAK ============ */
+function todayStr(){
+  const d = new Date();
+  return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();
+}
+function bumpStreak(){
+  const today = todayStr();
+  if (PROGRESS.streak.lastActiveDate === today) return;
+  const last = PROGRESS.streak.lastActiveDate;
+  if (last){
+    const lastDate = new Date(last.split("-").map((v,i)=>i===1?v-1:v));
+    // reconstruct properly
+  }
+  // simpler: compare day difference
+  let isConsecutive = false;
+  if (PROGRESS.streak.lastActiveDate){
+    const parts = PROGRESS.streak.lastActiveDate.split("-").map(Number);
+    const lastDate = new Date(parts[0], parts[1]-1, parts[2]);
+    const diffDays = Math.round((new Date(new Date().toDateString()) - new Date(lastDate.toDateString())) / 86400000);
+    isConsecutive = diffDays === 1;
+  }
+  PROGRESS.streak.count = isConsecutive ? (PROGRESS.streak.count + 1) : 1;
+  PROGRESS.streak.lastActiveDate = today;
+}
+
+/* ============ ANSWER CHECKING ============ */
+const NUM_WORDS = {
+  "zero":0,"one":1,"two":2,"three":3,"four":4,"five":5,"six":6,"seven":7,"eight":8,"nine":9,"ten":10,
+  "eleven":11,"twelve":12,"thirteen":13,"fourteen":14,"fifteen":15,"sixteen":16,"seventeen":17,
+  "eighteen":18,"nineteen":19,"twenty":20,"thirty":30,"forty":40,"fifty":50,"sixty":60,"seventy":70,
+  "eighty":80,"ninety":90,"hundred":100,"thousand":1000
+};
+
+// Units that must always be checked even though they're short (2-3 letters),
+// so "1 mcg" is never accepted for a correct answer of "1 mg" just because
+// the number matches. Without this, the length>2 word filters below would
+// silently drop these tokens and unit errors would go uncaught.
+const UNIT_WORDS = new Set(["mg","mcg","ml","g","kg","l","iu"]);
+
+function normalize(s){
+  return (s||"").toString().toLowerCase().trim()
+    .replace(/[^\w\s.%€$/:-]/g,"")
+    // strip periods EXCEPT ones sitting between digits (decimals like "0.5"),
+    // so trailing/sentence punctuation like "Directed." doesn't stop it
+    // matching the word "directed".
+    .replace(/(?<!\d)\.(?!\d)/g,"")
+    // put spaces around a "/" UNLESS it's between two digits (a fraction/ratio
+    // like "50/50" or "1/4", which should stay one token) — otherwise
+    // "day/once" would glue into a single unsplittable token that breaks
+    // every word-based matching strategy below.
+    .replace(/(?<!\d)\/|\/(?!\d)/g," / ")
+    .replace(/\s+/g," ")
+    .trim();
+}
+
+function extractNumbers(s){
+  const norm = normalize(s);
+  const nums = new Set();
+  const numMatches = norm.match(/\d+(\.\d+)?/g);
+  if (numMatches) numMatches.forEach(n => nums.add(parseFloat(n)));
+  norm.split(/[\s,]+/).forEach(w => {
+    if (NUM_WORDS.hasOwnProperty(w)) nums.add(NUM_WORDS[w]);
+  });
+  return nums;
+}
+
+function checkTypedAnswer(userInput, correctAnswer){
+  const u = normalize(userInput);
+  const c = normalize(correctAnswer);
+  if (!u) return false;
+  if (u === c) return true;
+
+  // If the correct answer has a parenthetical aside or a ";"-qualifier tacked on
+  // (e.g. "every 1 hour; (can replace the 1 with other numbers)"), also accept
+  // a match against just the core answer before that qualifier.
+  const core = correctAnswer.replace(/\([^)]*\)/g, "").split(";")[0].trim();
+  if (core && core !== correctAnswer && checkTypedAnswer(userInput, core)) return true;
+
+  // numeric equivalence check (digits vs word numbers)
+  const uNums = extractNumbers(u);
+  const cNums = extractNumbers(c);
+  if (cNums.size > 0){
+    let allFound = true;
+    cNums.forEach(n => { if (!uNums.has(n)) allFound = false; });
+    if (allFound) {
+      // also require some keyword overlap if the answer has words beyond numbers/units
+      const cWords = c.replace(/\d+(\.\d+)?/g,"").split(" ").filter(w=>(w.length>2 || UNIT_WORDS.has(w)) && !NUM_WORDS.hasOwnProperty(w));
+      if (cWords.length === 0) return true;
+    }
+  }
+
+  // substring containment for longer correct answers
+  if (c.length >= 6 && u.includes(c)) return true;
+  if (c.length >= 6 && c.includes(u) && u.length >= Math.max(4, c.length*0.6)) return true;
+
+  // keyword AND-matching for descriptive/multi-part answers (split on common delimiters)
+  const parts = c.split(/,| and | \/ |;/).map(p=>p.trim()).filter(Boolean);
+  if (parts.length > 1){
+    const matched = parts.filter(p => {
+      const keyTokens = p.split(" ").filter(w=>w.length>3);
+      if (keyTokens.length === 0) return u.includes(p);
+      const hitCount = keyTokens.filter(t => u.includes(t)).length;
+      return hitCount / keyTokens.length >= 0.6;
+    });
+    if (matched.length / parts.length >= 0.6) return true;
+  } else {
+    // single-answer keyword match: require most significant words present
+    const keyTokens = c.split(" ").filter(w=>w.length>3);
+    if (keyTokens.length >= 2){
+      const hitCount = keyTokens.filter(t => u.includes(t)).length;
+      if (hitCount / keyTokens.length >= 0.7) return true;
+    }
+  }
+
+  // Final fallback: content-word overlap, ignoring filler/stopwords. Handles
+  // paraphrases like "as directed" vs "to be used as directed", where the
+  // correct answer's real meaning rides on very few substantive words.
+  // Token comparison is stem-tolerant (see wordsMatch) so "day" credits
+  // against "daily", "hour" against "hourly", etc.
+  const uTokens = contentTokens(u);
+  const cTokens = contentTokens(c);
+  if (uTokens.length > 0 && cTokens.length > 0){
+    const overlap = cTokens.filter(ct => uTokens.some(ut => wordsMatch(ct, ut))).length;
+    const smaller = Math.min(uTokens.length, cTokens.length);
+    if (overlap >= 1 && overlap / smaller >= 0.6) return true;
+  }
+
+  return false;
+}
+
+const STOPWORDS = new Set([
+  "with","from","that","this","then","than","also","into","per","the","and","for",
+  "are","was","were","been","use","used","using","have","has","had","will","shall",
+  "should","would","could","must","only","upon","onto","your","their","its","who",
+  "whom","what","when","where","which","while","not","but","you","all","any","can",
+  "may","such","each","other","some","more","most","two","one"
+]);
+function contentTokens(normalizedStr){
+  return normalizedStr.split(" ")
+    .map(w => w.replace(/^[€$]/,"").replace(/[€$]$/,""))   // "€80" / "80€" -> "80" so currency doesn't block numeric matches
+    .filter(w => w.length > 0)
+    .filter(w => {
+      if (/^\d+(\.\d+)?$/.test(w)) return true;             // always keep bare numbers, however short (e.g. "80")
+      return (w.length > 2 || UNIT_WORDS.has(w)) && !STOPWORDS.has(w) && !NUM_WORDS.hasOwnProperty(w);
+    });
+}
+
+// Two words "match" if identical, share a root once a common suffix is
+// stripped (daily/day, hourly/hour, weekly/week — English swaps a
+// trailing "y" for "ily" before "-ly", so "daily" is stripped to "day"
+// rather than compared letter-by-letter against it), if one is simply
+// the other plus a short suffix (need/needed, drop/drops), or if both
+// appear in the same small synonym group below (used sparingly, for
+// terms that are genuinely interchangeable in dosing instructions —
+// not a general thesaurus, which would risk false positives elsewhere).
+const SYNONYM_GROUPS = [
+  ["food", "meal", "meals"],
+  ["needed", "required", "necessary"]
+];
+function stem(w){
+  if (w.length >= 5 && w.endsWith("ily")) return w.slice(0, -3) + "y";
+  if (w.length >= 5 && w.endsWith("ly")) return w.slice(0, -2);
+  return w;
+}
+function wordsMatch(a, b){
+  if (a === b) return true;
+  if (/^\d+(\.\d+)?$/.test(a) || /^\d+(\.\d+)?$/.test(b)) return false; // never fuzzy-match numbers
+  if (stem(a) === stem(b)) return true;
+  if (SYNONYM_GROUPS.some(g => g.includes(a) && g.includes(b))) return true;
+  const shorter = a.length <= b.length ? a : b;
+  const longer = a.length <= b.length ? b : a;
+  if (shorter.length < 3) return false;
+  return longer.startsWith(shorter) && (longer.length - shorter.length) <= 3;
+}
+
+/* ============ VIEW MANAGEMENT ============ */
+function showView(name){
+  document.querySelectorAll(".section").forEach(s => s.classList.add("hidden"));
+  document.getElementById("view-" + name).classList.remove("hidden");
+  document.querySelectorAll(".nav-tab").forEach(b => b.classList.toggle("active", b.dataset.view === name));
+  document.querySelectorAll(".bnav-btn").forEach(b => b.classList.toggle("active", b.dataset.view === name));
+  if (name === "home") renderHome();
+  if (name === "settings") renderSettingsView();
+}
+
+document.querySelectorAll(".nav-tab, .bnav-btn").forEach(btn=>{
+  btn.addEventListener("click", ()=> showView(btn.dataset.view));
+});
+
+/* ============ RENDER: HOME ============ */
+function renderHome(){
+  const mastery = computeMastery();
+  document.getElementById("mastery-pill").textContent = mastery + "%";
+  document.getElementById("streak-pill").textContent = PROGRESS.streak.count;
+  document.getElementById("ring-val").textContent = mastery + "%";
+  document.getElementById("dreyfus-tier").textContent = dreyfusTier(mastery);
+  document.getElementById("stat-due").textContent = getDueCards().length;
+  document.getElementById("stat-total").textContent = getAllRelevantCards().length;
+  document.getElementById("stat-streak").textContent = PROGRESS.streak.count;
+
+  const circumference = 226;
+  const offset = circumference - (mastery/100)*circumference;
+  document.getElementById("ring-progress").style.strokeDashoffset = offset;
+
+  const list = document.getElementById("home-topic-list");
+  list.innerHTML = "";
+  TOPICS.forEach(t => {
+    const enabled = PROGRESS.topicEnabled[t.id] !== false;
+    const pct = topicMastery(t.id);
+    const row = document.createElement("div");
+    row.className = "topic-row";
+    row.style.opacity = enabled ? "1" : ".55";
+    row.innerHTML = `
+      <div class="icon">${t.icon}</div>
+      <div class="meta">
+        <div class="name">${t.name}</div>
+        <div class="bar-wrap"><div class="bar" style="width:${pct}%"></div></div>
+        <div class="sub">${CARD_BANK[t.id].length} cards · ${pct}% mastered</div>
+      </div>
+      <button class="toggle ${enabled?'on':''}" data-topic="${t.id}"><span class="knob"></span></button>
+    `;
+    list.appendChild(row);
+  });
+  list.querySelectorAll(".toggle").forEach(tg=>{
+    tg.addEventListener("click", async ()=>{
+      const id = tg.dataset.topic;
+      const cur = PROGRESS.topicEnabled[id] !== false;
+      PROGRESS.topicEnabled[id] = !cur;
+      await saveProgress();
+      renderHome();
+    });
+  });
+
+  document.getElementById("btn-start-quiz").disabled = getAllRelevantCards().length === 0;
+  document.getElementById("btn-start-flash").disabled = getAllRelevantCards().length === 0;
+}
+
+document.getElementById("btn-start-quiz").addEventListener("click", ()=> startSession("quiz"));
+document.getElementById("btn-start-flash").addEventListener("click", ()=> startSession("flash"));
+document.getElementById("btn-back-home").addEventListener("click", ()=> showView("home"));
+document.getElementById("btn-all-on").addEventListener("click", async ()=>{
+  TOPICS.forEach(t => PROGRESS.topicEnabled[t.id] = true);
+  await saveProgress(); renderHome();
+});
+document.getElementById("btn-all-off").addEventListener("click", async ()=>{
+  TOPICS.forEach(t => PROGRESS.topicEnabled[t.id] = false);
+  await saveProgress(); renderHome();
+});
+
+/* ============ RENDER: SETTINGS ============ */
+function renderSettingsView(){
+  document.getElementById("settings-streak-desc").textContent = PROGRESS.streak.count + " days";
+  document.getElementById("settings-mastery-desc").textContent = computeMastery() + "%";
+  document.getElementById("settings-total-desc").textContent = PROGRESS.totalAnswered;
+}
+
+document.getElementById("btn-reset").addEventListener("click", ()=>{
+  showConfirm("This will permanently erase your streak, mastery and spaced-repetition history on this device. This cannot be undone.", async ()=>{
+    PROGRESS = defaultProgress();
+    TOPICS.forEach(t => PROGRESS.topicEnabled[t.id] = true);
+    await saveProgress();
+    renderHome(); renderSettingsView();
+  });
+});
+
+function showConfirm(message, onConfirm){
+  const overlay = document.createElement("div");
+  overlay.className = "confirm-overlay";
+  overlay.innerHTML = `
+    <div class="confirm-box">
+      <h3>Are you sure?</h3>
+      <p>${message}</p>
+      <div class="confirm-actions">
+        <button class="btn btn-ghost" id="confirm-cancel">Cancel</button>
+        <button class="btn btn-primary" id="confirm-ok" style="background:#c0392b;">Reset</button>
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+  overlay.querySelector("#confirm-cancel").addEventListener("click", ()=> overlay.remove());
+  overlay.querySelector("#confirm-ok").addEventListener("click", ()=>{ overlay.remove(); onConfirm(); });
+}
+
+/* ============ SESSION ENGINE ============ */
+function shuffle(arr){
+  const a = arr.slice();
+  for (let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+function buildSessionQueue(mode){
+  let due = getDueCards();
+  if (mode === "flash") due = due.filter(c => c.type !== "scenario");
+  if (due.length === 0){
+    // nothing due: pull from full relevant pool, prioritising low-box cards
+    due = getAllRelevantCards();
+    if (mode === "flash") due = due.filter(c => c.type !== "scenario");
+  }
+  due = shuffle(due).sort((a,b)=>{
+    const sa = PROGRESS.cardState[a.id] ? PROGRESS.cardState[a.id].box : 1;
+    const sb = PROGRESS.cardState[b.id] ? PROGRESS.cardState[b.id].box : 1;
+    return sa - sb;
+  });
+  return due.slice(0, Math.min(20, due.length));
+}
+
+async function startSession(mode){
+  const queue = buildSessionQueue(mode);
+  if (queue.length === 0){
+    showView("topics");
+    return;
+  }
+  currentSession = {mode, queue, index:0, correctCount:0};
+  bumpStreak();
+  await saveProgress();
+  showView(mode === "quiz" ? "study" : "flash");
+  if (mode === "quiz") renderQuizCard();
+  else renderFlashCard();
+}
+
+function endSession(){
+  const s = currentSession;
+  document.getElementById("complete-summary").textContent =
+    s.mode === "quiz"
+      ? `You answered ${s.correctCount} of ${s.queue.length} correctly.`
+      : `You reviewed ${s.queue.length} flashcards.`;
+  currentSession = null;
+  showView("complete");
+}
+
+/* ============ GENERATED CALCULATIONS ============
+   These cards don't ship a fixed question/answer. Instead they carry
+   {type:"gen", generator:"<name>"} and a fresh, randomised-but-sensible
+   question/answer/explanation is produced each time the card comes up
+   for review. Values are drawn from curated pools (not free-form random
+   numbers) so every generated question resolves to a clean, realistic
+   answer — no recurring decimals, no implausible pharmacy quantities.
+   Progress/mastery is still tracked against the fixed card.id. */
+
+function pick(arr){ return arr[Math.floor(Math.random() * arr.length)]; }
+
+// strips trailing zeros so 0.50 -> 0.5, 500.0 -> 500
+function cleanNum(n){
+  return Math.round(n * 1000) / 1000;
+}
+
+const CALC_GENERATORS = {
+
+  // Unit conversion: g<->mg<->mcg, values chosen so the conversion always
+  // lands on a clean number.
+  unitConversion(){
+    const options = [
+      { from:"grams", to:"milligrams", abbr:"mg", factor:1000, dir:"multiply",
+        values:[0.1,0.2,0.25,0.5,0.75,1,1.5,2,2.5,3,4,5] },
+      { from:"milligrams", to:"micrograms", abbr:"mcg", factor:1000, dir:"multiply",
+        values:[0.1,0.25,0.5,0.75,1,1.5,2,2.5,3,4,5] },
+      { from:"micrograms", to:"milligrams", abbr:"mg", factor:1/1000, dir:"divide",
+        values:[125,250,375,500,625,750,875,1000] },
+      { from:"milligrams", to:"grams", abbr:"g", factor:1/1000, dir:"divide",
+        values:[250,500,750,1000,1250,1500,1750,2000,2500] }
+    ];
+    const o = pick(options);
+    const value = pick(o.values);
+    const answer = cleanNum(value * o.factor);
+    const fromAbbr = o.from === "grams" ? "g" : (o.from === "milligrams" ? "mg" : "mcg");
+    return {
+      question: `Convert ${value} ${o.from} to ${o.to}.`,
+      answer: `${answer} ${o.abbr}`,
+      explanation: o.dir === "multiply"
+        ? `Going from a bigger unit (${fromAbbr}) to a smaller unit (${o.abbr}), multiply by 1000: ${value} ${fromAbbr} × 1000 = ${answer} ${o.abbr}.`
+        : `Going from a smaller unit (${fromAbbr}) to a bigger unit (${o.abbr}), divide by 1000: ${value} ${fromAbbr} ÷ 1000 = ${answer} ${o.abbr}.`
+    };
+  },
+
+  // % w/w: grams of active ingredient needed for a cream/ointment pot.
+  // Curated (strength, pot size) pairs so the result is always clean.
+  percentWW(){
+    const pairs = [
+      {strength:1, pot:50, grams:0.5}, {strength:1, pot:100, grams:1},
+      {strength:2, pot:50, grams:1}, {strength:2, pot:25, grams:0.5},
+      {strength:2.5, pot:100, grams:2.5}, {strength:5, pot:50, grams:2.5},
+      {strength:5, pot:100, grams:5}, {strength:10, pot:25, grams:2.5},
+      {strength:10, pot:50, grams:5}, {strength:20, pot:25, grams:5}
+    ];
+    const p = pick(pairs);
+    return {
+      question: `A prescription needs Hydrocortisone ${p.strength}% w/w cream, ${p.pot}g pot. How many grams of hydrocortisone powder are needed?`,
+      answer: `${p.grams} grams`,
+      explanation: `${p.strength}% w/w = ${p.strength}g per 100g. Proportion: (${p.strength}/100) × ${p.pot} = ${p.grams} grams of hydrocortisone powder.`
+    };
+  },
+
+  // Ratio strength, e.g. Adrenaline 1:1000 -> mg per mL ampoule.
+  ratioStrength(){
+    const ratios = [1000,500,250,200,100,50]; // all divide 1000 evenly
+    const volumes = [0.5,1,2,5,10];
+    const ratio = pick(ratios);
+    const volume = pick(volumes);
+    const concPerML = 1000 / ratio;
+    const answer = cleanNum(concPerML * volume);
+    return {
+      question: `Adrenaline Injection is labelled 1:${ratio}. How many milligrams of adrenaline are in a ${volume}mL ampoule?`,
+      answer: `${answer} mg`,
+      explanation: `1:${ratio} means 1g (1000mg) per ${ratio}mL, i.e. ${concPerML}mg/mL. ${volume}mL × ${concPerML}mg/mL = ${answer}mg.`
+    };
+  },
+
+  // Dose from a suspension's strength (mg per mL), e.g. paracetamol 120mg/5mL.
+  suspensionDose(){
+    const strengths = [
+      {drug:"Paracetamol", mg:120, per:5}, {drug:"Paracetamol", mg:250, per:5},
+      {drug:"Amoxicillin", mg:125, per:5}, {drug:"Amoxicillin", mg:250, per:5},
+      {drug:"Amoxicillin", mg:500, per:5}
+    ];
+    const s = pick(strengths);
+    const ratio = s.mg / s.per; // mg per mL, integer for all pairs above
+    const mlCandidates = [2.5,5,7.5,10,12.5,15,20,25,30];
+    const valid = mlCandidates.filter(ml => Number.isInteger(Math.round(ml * ratio * 10) / 10));
+    const mL = pick(valid);
+    const dose = Math.round(mL * ratio);
+    return {
+      question: `A child is prescribed ${dose}mg of ${s.drug}. The suspension is ${s.mg}mg/${s.per}mL. How many mL are needed?`,
+      answer: `${mL} mL`,
+      explanation: `${dose}mg ÷ (${s.mg}mg per ${s.per}mL) = ${dose} ÷ ${ratio}mg/mL = ${mL}mL.`
+    };
+  },
+
+  // Dilution: stock/water split to make a weaker solution from a stronger stock.
+  // Curated combos so stock and water volumes are always whole numbers.
+  dilutionStock(){
+    const combos = [
+      {stockPct:10, targetPct:2, finalVol:250, stockVol:50, waterVol:200},
+      {stockPct:10, targetPct:5, finalVol:200, stockVol:100, waterVol:100},
+      {stockPct:20, targetPct:4, finalVol:250, stockVol:50, waterVol:200},
+      {stockPct:25, targetPct:5, finalVol:200, stockVol:40, waterVol:160},
+      {stockPct:50, targetPct:10, finalVol:250, stockVol:50, waterVol:200},
+      {stockPct:10, targetPct:1, finalVol:500, stockVol:50, waterVol:450},
+      {stockPct:20, targetPct:2, finalVol:300, stockVol:30, waterVol:270}
+    ];
+    const c = pick(combos);
+    return {
+      question: `You need ${c.finalVol}mL of a ${c.targetPct}% cleaning solution from a ${c.stockPct}% stock. How much stock solution and how much water are needed?`,
+      answer: `${c.stockVol}mL of stock solution and ${c.waterVol}mL of water`,
+      explanation: `Using C1V1=C2V2: V1 = (C2×V2)/C1 = (${c.targetPct}%×${c.finalVol}mL)/${c.stockPct}% = ${c.stockVol}mL of stock. Water = ${c.finalVol} − ${c.stockVol} = ${c.waterVol}mL.`
+    };
+  }
+};
+
+// Returns a fresh {question, answer, explanation} for a "gen" card, merged
+// onto its fixed id/topicId/type so progress tracking is unaffected.
+function materializeCard(card){
+  if (card.type !== "gen") return card;
+  const gen = CALC_GENERATORS[card.generator];
+  const fresh = gen ? gen() : {question:"(generator missing)", answer:"", explanation:""};
+  return Object.assign({}, card, fresh);
+}
+
+/* ---- Quiz rendering ---- */
+function renderQuizCard(){
+  const s = currentSession;
+  const card = materializeCard(s.queue[s.index]);
+
+  const topic = TOPICS.find(t=>t.id===card.topicId);
+  document.getElementById("study-progress-label").textContent = `Card ${s.index+1} of ${s.queue.length}`;
+  const st = PROGRESS.cardState[card.id];
+  document.getElementById("study-box-label").textContent = st ? `Box ${st.box}/5` : "New card";
+  document.getElementById("study-progress-bar").style.width = Math.round((s.index/s.queue.length)*100) + "%";
+
+  const container = document.getElementById("quiz-card");
+  container.innerHTML = "";
+
+  if (card.type === "scenario"){
+    renderScenarioCard(card, container);
+    return;
+  }
+
+  const tag = document.createElement("div");
+  tag.className = "tag";
+  tag.textContent = topic ? topic.name : "";
+  container.appendChild(tag);
+
+  const q = document.createElement("div");
+  q.className = "question";
+  q.textContent = card.question;
+  container.appendChild(q);
+
+  const feedbackBox = document.createElement("div");
+  feedbackBox.id = "quiz-feedback";
+
+  if (card.type === "mc"){
+    const opts = document.createElement("div");
+    opts.className = "mc-options";
+    const shuffledOptions = shuffle(card.options);
+    shuffledOptions.forEach(opt => {
+      const b = document.createElement("button");
+      b.className = "mc-option";
+      b.textContent = opt;
+      b.addEventListener("click", ()=> handleQuizAnswer(card, opt === card.answer, opts, b, feedbackBox));
+      opts.appendChild(b);
+    });
+    container.appendChild(opts);
+  } else {
+    const wrap = document.createElement("div");
+    wrap.className = "typed-wrap";
+    wrap.innerHTML = `<input type="text" id="typed-input" placeholder="Type your answer…" autocomplete="off" autocapitalize="off" autocorrect="off">`;
+    container.appendChild(wrap);
+
+    const actions = document.createElement("div");
+    actions.className = "card-actions";
+    const submitBtn = document.createElement("button");
+    submitBtn.className = "btn btn-primary btn-block";
+    submitBtn.textContent = "Check answer";
+    actions.appendChild(submitBtn);
+    container.appendChild(actions);
+
+    const input = wrap.querySelector("#typed-input");
+    const submit = ()=>{
+      const val = input.value.trim();
+      if (!val) return;
+      const correct = checkTypedAnswer(val, card.answer);
+      input.disabled = true;
+      submitBtn.disabled = true;
+      handleQuizAnswer(card, correct, null, null, feedbackBox);
+    };
+    submitBtn.addEventListener("click", submit);
+    input.addEventListener("keydown", (e)=>{ if (e.key === "Enter") submit(); });
+    setTimeout(()=>input.focus(), 50);
+  }
+
+  container.appendChild(feedbackBox);
+}
+
+async function handleQuizAnswer(card, wasCorrect, optsContainer, clickedBtn, feedbackBox){
+  if (optsContainer){
+    Array.from(optsContainer.children).forEach(b=>{
+      b.disabled = true;
+      if (b.textContent === card.answer) b.classList.add("correct");
+      else if (b === clickedBtn) b.classList.add("wrong");
+    });
+  }
+  recordAnswer(card.id, wasCorrect);
+  if (wasCorrect) currentSession.correctCount += 1;
+  await saveProgress();
+
+  feedbackBox.className = "feedback-box " + (wasCorrect ? "good" : "bad");
+  feedbackBox.innerHTML = `
+    <div class="verdict">${wasCorrect ? "✅ Correct" : "❌ Not quite"}</div>
+    ${wasCorrect ? "" : `<div class="correct-answer">Correct answer: ${card.answer}</div>`}
+    <div>${card.explanation}</div>
+    ${card.hook ? `<div class="hook">💡 ${card.hook}</div>` : ""}
+  `;
+
+  const actions = document.createElement("div");
+  actions.className = "card-actions";
+  const nextBtn = document.createElement("button");
+  nextBtn.className = "btn btn-primary btn-block";
+  nextBtn.textContent = currentSession.index + 1 < currentSession.queue.length ? "Next card" : "Finish session";
+  nextBtn.addEventListener("click", ()=>{
+    currentSession.index += 1;
+    if (currentSession.index >= currentSession.queue.length){
+      renderHome();
+      endSession();
+    } else {
+      renderQuizCard();
+    }
+  });
+  actions.appendChild(nextBtn);
+  document.getElementById("quiz-card").appendChild(actions);
+}
+
+/* ---- Scenario (branching) rendering ----
+   A "scenario" card has {title, intro, start, nodes}. Each node is either
+   a decision {text, choices:[{label,next,correct?,feedback?}]} or a
+   terminal {text, end:true}. Choices with no "correct" field (the "Continue"
+   choices after a misstep) aren't scored — they just move the story on.
+   The run only counts as fully correct (for spaced-repetition purposes) if
+   every scored decision was right the first time. */
+function renderScenarioCard(card, container){
+  const topic = TOPICS.find(t=>t.id===card.topicId);
+  let nodeId = card.start;
+  let totalScored = 0, correctScored = 0;
+  let finished = false;
+
+  function draw(){
+    container.innerHTML = "";
+
+    const tag = document.createElement("div");
+    tag.className = "tag";
+    tag.textContent = topic ? topic.name : "";
+    container.appendChild(tag);
+
+    if (nodeId === card.start){
+      const introEl = document.createElement("div");
+      introEl.className = "question";
+      introEl.innerHTML = `<strong>${card.title}</strong><br><br>${card.intro}`;
+      container.appendChild(introEl);
+    }
+
+    const node = card.nodes[nodeId];
+    const body = document.createElement("div");
+    body.className = "question";
+    body.textContent = node.text;
+    container.appendChild(body);
+
+    if (node.end){
+      finished = true;
+      const wasFullyCorrect = totalScored > 0 && correctScored === totalScored;
+      const feedbackBox = document.createElement("div");
+      feedbackBox.className = "feedback-box " + (wasFullyCorrect ? "good" : "bad");
+      feedbackBox.innerHTML = `
+        <div class="verdict">${wasFullyCorrect ? "✅ Clean run" : `⚠️ ${correctScored}/${totalScored} correct on the first try`}</div>
+      `;
+      container.appendChild(feedbackBox);
+
+      recordAnswer(card.id, wasFullyCorrect);
+      if (wasFullyCorrect) currentSession.correctCount += 1;
+      saveProgress();
+
+      const actions = document.createElement("div");
+      actions.className = "card-actions";
+      const nextBtn = document.createElement("button");
+      nextBtn.className = "btn btn-primary btn-block";
+      nextBtn.textContent = currentSession.index + 1 < currentSession.queue.length ? "Next card" : "Finish session";
+      nextBtn.addEventListener("click", ()=>{
+        currentSession.index += 1;
+        if (currentSession.index >= currentSession.queue.length){
+          renderHome();
+          endSession();
+        } else {
+          renderQuizCard();
+        }
+      });
+      actions.appendChild(nextBtn);
+      container.appendChild(actions);
+      return;
+    }
+
+    const opts = document.createElement("div");
+    opts.className = "mc-options";
+    node.choices.forEach(choice => {
+      const b = document.createElement("button");
+      b.className = "mc-option";
+      b.textContent = choice.label;
+      b.addEventListener("click", ()=>{
+        Array.from(opts.children).forEach(x => x.disabled = true);
+        const isScored = choice.correct !== undefined;
+        if (isScored){
+          totalScored += 1;
+          if (choice.correct){ correctScored += 1; b.classList.add("correct"); }
+          else { b.classList.add("wrong"); }
+        }
+        if (choice.feedback){
+          const fb = document.createElement("div");
+          fb.className = "feedback-box " + (isScored ? (choice.correct ? "good" : "bad") : "");
+          fb.innerHTML = `<div>${choice.feedback}</div>`;
+          container.appendChild(fb);
+        }
+        const cont = document.createElement("div");
+        cont.className = "card-actions";
+        const contBtn = document.createElement("button");
+        contBtn.className = "btn btn-primary btn-block";
+        contBtn.textContent = "Continue";
+        contBtn.addEventListener("click", ()=>{ nodeId = choice.next; draw(); });
+        cont.appendChild(contBtn);
+        container.appendChild(cont);
+      });
+      opts.appendChild(b);
+    });
+    container.appendChild(opts);
+  }
+
+  draw();
+}
+
+/* ---- Flashcard rendering ---- */
+function renderFlashCard(){
+  const s = currentSession;
+  const card = materializeCard(s.queue[s.index]);
+  const topic = TOPICS.find(t=>t.id===card.topicId);
+  document.getElementById("flash-progress-label").textContent = `Card ${s.index+1} of ${s.queue.length}`;
+  document.getElementById("flash-progress-bar").style.width = Math.round((s.index/s.queue.length)*100) + "%";
+
+  let flipped = false;
+  const container = document.getElementById("flash-card");
+
+  function draw(){
+    container.innerHTML = `
+      <div class="tag">${topic ? topic.name : ""}</div>
+      <div class="flip-hint">${flipped ? "" : "tap to flip"}</div>
+      <div class="content">${flipped ? card.answer : card.question}</div>
+      ${flipped ? `<div class="divider"></div><div class="explain">${card.explanation}</div>${card.hook ? `<div class="hook">💡 ${card.hook}</div>` : ""}` : ""}
+    `;
+    if (flipped){
+      const gradeRow = document.createElement("div");
+      gradeRow.className = "grade-row";
+      gradeRow.innerHTML = `
+        <button class="grade-btn grade-again" data-g="again">Again</button>
+        <button class="grade-btn grade-hard" data-g="hard">Hard</button>
+        <button class="grade-btn grade-good" data-g="good">Good</button>
+        <button class="grade-btn grade-easy" data-g="easy">Easy</button>
+      `;
+      gradeRow.querySelectorAll("button").forEach(b=>{
+        b.addEventListener("click", async (ev)=>{
+          ev.stopPropagation();
+          recordFlashGrade(card.id, b.dataset.g);
+          await saveProgress();
+          s.index += 1;
+          if (s.index >= s.queue.length){
+            renderHome();
+            endSession();
+          } else {
+            renderFlashCard();
+          }
+        });
+      });
+      container.appendChild(gradeRow);
+    }
+  }
+  container.onclick = ()=>{ if (!flipped){ flipped = true; draw(); } };
+  draw();
+}
+
+/* ============ INIT ============ */
+async function init(){
+  await loadProgress();
+  await loadData();
+  await saveProgress();
+  showView("home");
+}
+init();
+
+})();
+</script>
+</body>
+</html>
