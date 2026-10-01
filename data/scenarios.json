@@ -1,0 +1,922 @@
+[
+  {
+    "id": "scn-emergency-patient",
+    "type": "scenario",
+    "title": "Emergency Supply: Patient Request",
+    "intro": "Saturday afternoon. Mrs. O'Brien is a regular patient — out of her Ramipril, her GP surgery is closed until Monday, and she has no prescription with her.",
+    "start": "n1",
+    "nodes": {
+      "n1": {
+        "text": "What do you need to establish first?",
+        "choices": [
+          {
+            "label": "Whether this is a patient-request or prescriber-request emergency supply",
+            "correct": true,
+            "next": "n2",
+            "feedback": "Right — the two routes have different rules (quantity limits, follow-up requirements), so classifying it correctly comes first."
+          },
+          {
+            "label": "Whether she can pay for it privately",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "Payment isn't the deciding factor here — the type of emergency supply request is."
+          },
+          {
+            "label": "Tell her to attend the out-of-hours GP service instead",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "For a routine repeat medication like this, an emergency supply from the pharmacy is the appropriate route."
+          }
+        ]
+      },
+      "fix1": {
+        "text": "This is a patient-request emergency supply — Mrs. O'Brien is asking directly, with no prescriber involved yet.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n2"
+          }
+        ]
+      },
+      "n2": {
+        "text": "Confirmed: patient-request. What's the maximum quantity you can supply?",
+        "choices": [
+          {
+            "label": "5 days' treatment",
+            "correct": true,
+            "next": "n3",
+            "feedback": "Correct — 5 days is the general limit (exceptions include smallest pack of inhalers/creams, a full course of liquid antibiotics, or a full cycle of oral contraceptives)."
+          },
+          {
+            "label": "A full 30-day supply",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "30 days is too much for a patient-request supply — that's not the rule here."
+          },
+          {
+            "label": "Whatever amount she asks for",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "The quantity is capped by law, not set by the patient's request."
+          }
+        ]
+      },
+      "fix2": {
+        "text": "The general rule for a patient-request emergency supply is a maximum of 5 days' treatment.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n3"
+          }
+        ]
+      },
+      "n3": {
+        "text": "You dispense 5 days' Ramipril. What must the label say?",
+        "choices": [
+          {
+            "label": "'Emergency Supply' clearly stated",
+            "correct": true,
+            "next": "end",
+            "feedback": "Correct — any emergency supply must be clearly labelled as such."
+          },
+          {
+            "label": "Nothing different from a normal label",
+            "correct": false,
+            "next": "fix3",
+            "feedback": "The label must flag this as an emergency supply so anyone handling the medicine afterwards knows the circumstances."
+          }
+        ]
+      },
+      "fix3": {
+        "text": "Every emergency supply label must clearly state 'Emergency Supply'.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "end"
+          }
+        ]
+      },
+      "end": {
+        "text": "Handled correctly. Because this was a patient request (not a prescriber request), there's no legal requirement for a follow-up prescription — though it's good practice to encourage Mrs. O'Brien to see her GP for a proper repeat.",
+        "end": true
+      }
+    }
+  },
+  {
+    "id": "scn-emergency-prescriber",
+    "type": "scenario",
+    "title": "Emergency Supply: Prescriber Request",
+    "intro": "A GP phones the pharmacy directly on a Friday evening: a patient needs their epilepsy medication started urgently, but the GP can't get a paper prescription to you until Monday.",
+    "start": "n1",
+    "nodes": {
+      "n1": {
+        "text": "What must the GP do as part of requesting this emergency supply?",
+        "choices": [
+          {
+            "label": "Undertake to provide a valid prescription within 72 hours",
+            "correct": true,
+            "next": "n2",
+            "feedback": "Correct — the prescriber must undertake to supply a valid prescription within 72 hours of the request."
+          },
+          {
+            "label": "Just email a photo of a prescription pad",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "A photo isn't sufficient — a valid prescription must still follow within the set timeframe."
+          },
+          {
+            "label": "Nothing further, once they've phoned",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "The phone request must still be followed up with a valid prescription within the set timeframe."
+          }
+        ]
+      },
+      "fix1": {
+        "text": "The rule: the prescriber must undertake to supply a valid prescription within 72 hours of requesting the emergency supply.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n2"
+          }
+        ]
+      },
+      "n2": {
+        "text": "Four days pass and the GP still hasn't sent the prescription. What's the significance of the 72-hour window here?",
+        "choices": [
+          {
+            "label": "It's been breached — the prescriber failed their undertaking, and that should be followed up",
+            "correct": true,
+            "next": "n3",
+            "feedback": "Correct. Once that window passes without the promised prescription, it's a compliance issue on the prescriber's side worth following up."
+          },
+          {
+            "label": "It doesn't matter, as long as the patient got their medicine",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "Supplying the medicine doesn't remove the prescriber's obligation to send the follow-up prescription."
+          }
+        ]
+      },
+      "fix2": {
+        "text": "The 72-hour undertaking is a real obligation — if it's missed, it should be followed up.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n3"
+          }
+        ]
+      },
+      "n3": {
+        "text": "What must the label on this supply say?",
+        "choices": [
+          {
+            "label": "'Emergency Supply'",
+            "correct": true,
+            "next": "end",
+            "feedback": "Correct — this applies to all emergency supplies, patient or prescriber request."
+          },
+          {
+            "label": "The GP's undertaking reference number",
+            "correct": false,
+            "next": "fix3",
+            "feedback": "There's no such reference number requirement — the label just needs to say 'Emergency Supply'."
+          }
+        ]
+      },
+      "fix3": {
+        "text": "The label requirement is simply 'Emergency Supply', clearly stated.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "end"
+          }
+        ]
+      },
+      "end": {
+        "text": "Handled correctly. Prescriber-request emergency supplies hinge on that 72-hour undertaking — track it, and follow up if it's missed.",
+        "end": true
+      }
+    }
+  },
+  {
+    "id": "scn-naloxone",
+    "type": "scenario",
+    "title": "Naloxone Without a Prescription",
+    "intro": "A distressed man rushes into the pharmacy saying his friend has collapsed outside and he thinks it's an overdose. He's heard the pharmacy might have something that can help immediately.",
+    "start": "n1",
+    "nodes": {
+      "n1": {
+        "text": "Can you supply and administer Naloxone here without a prescription?",
+        "choices": [
+          {
+            "label": "Yes, if you're a trained pharmacist and this matches its approved use",
+            "correct": true,
+            "next": "n2",
+            "feedback": "Correct — trained pharmacists can supply Naloxone without a prescription, but only for its approved indication."
+          },
+          {
+            "label": "No, Naloxone always requires a prescription",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "Naloxone is one of the medicines a trained pharmacist can supply without a prescription — training is the requirement, not a prescription."
+          }
+        ]
+      },
+      "fix1": {
+        "text": "A trained pharmacist can supply Naloxone without a prescription, for its approved indication.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n2"
+          }
+        ]
+      },
+      "n2": {
+        "text": "What is Naloxone actually indicated for in this without-prescription pathway?",
+        "choices": [
+          {
+            "label": "Respiratory depression from known or suspected narcotic overdose",
+            "correct": true,
+            "next": "n3",
+            "feedback": "Correct — that's specifically what it covers."
+          },
+          {
+            "label": "Any kind of collapse or medical emergency",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "It's specific to respiratory depression from narcotic overdose — not a general emergency medicine for any collapse."
+          }
+        ]
+      },
+      "fix2": {
+        "text": "Naloxone (without prescription) is specifically for respiratory depression from known or suspected narcotic overdose.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n3"
+          }
+        ]
+      },
+      "n3": {
+        "text": "Before any of this applies, what must be true of the pharmacist supplying it?",
+        "choices": [
+          {
+            "label": "They must have completed PSI-approved training",
+            "correct": true,
+            "next": "end",
+            "feedback": "Correct — this without-prescription supply route only applies once the pharmacist has completed the required training."
+          },
+          {
+            "label": "Nothing — any registered pharmacist can do this automatically",
+            "correct": false,
+            "next": "fix3",
+            "feedback": "Training is required first — it's not automatic for every registered pharmacist."
+          }
+        ]
+      },
+      "fix3": {
+        "text": "PSI-approved training is required before a pharmacist can supply Naloxone this way.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "end"
+          }
+        ]
+      },
+      "end": {
+        "text": "If your pharmacy has a trained pharmacist on duty, Naloxone can be supplied for this indication without delay. If not, this becomes a 999 / emergency services situation instead.",
+        "end": true
+      }
+    }
+  },
+  {
+    "id": "scn-nurse-scope",
+    "type": "scenario",
+    "title": "A Prescription Outside Scope?",
+    "intro": "A prescription arrives from a nurse prescriber for a medicine that seems unusual for their typical area of practice — you're not sure it's within their scope.",
+    "start": "n1",
+    "nodes": {
+      "n1": {
+        "text": "What's the correct first response?",
+        "choices": [
+          {
+            "label": "Verify the prescription's validity — e.g. contact the prescriber or their collaborating doctor",
+            "correct": true,
+            "next": "n2",
+            "feedback": "Correct — this is the professional obligation: verify, don't assume."
+          },
+          {
+            "label": "Refuse to dispense it automatically",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "Automatic refusal isn't correct either — you're expected to verify first, not reject outright."
+          },
+          {
+            "label": "Dispense it anyway without question",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "Dispensing without checking skips your professional obligation to verify validity."
+          }
+        ]
+      },
+      "fix1": {
+        "text": "The correct step is always to verify — e.g. by contacting the prescriber or their collaborating doctor — rather than assuming either way.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n2"
+          }
+        ]
+      },
+      "n2": {
+        "text": "You contact the prescriber and they confirm it's within their scope and clinically appropriate. What now?",
+        "choices": [
+          {
+            "label": "Proceed with dispensing as normal",
+            "correct": true,
+            "next": "end",
+            "feedback": "Correct — once validity is confirmed, there's no remaining barrier to dispensing."
+          },
+          {
+            "label": "Still refuse, just to be safe",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "Once you've verified and it checks out, refusing anyway isn't warranted or professional."
+          }
+        ]
+      },
+      "fix2": {
+        "text": "Once verification confirms the prescription is valid and appropriate, it should be dispensed as normal.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "end"
+          }
+        ]
+      },
+      "end": {
+        "text": "Verification — not automatic refusal or automatic compliance — is the professional standard whenever a prescription looks outside a prescriber's typical scope.",
+        "end": true
+      }
+    }
+  },
+  {
+    "id": "scn-cd-emergency",
+    "type": "scenario",
+    "title": "Emergency Supply of a Controlled Drug",
+    "intro": "Friday evening. A carer arrives for a palliative care patient, out of their oral morphine solution. The GP surgery is closed and the on-call GP can't get a script to you until morning.",
+    "start": "n1",
+    "nodes": {
+      "n1": {
+        "text": "Morphine solution is a Schedule 2 Controlled Drug. Can you make an emergency supply at all?",
+        "choices": [
+          {
+            "label": "Yes, but only if several extra conditions are met beyond the normal emergency supply rules",
+            "correct": true,
+            "next": "n2",
+            "feedback": "Correct — CD emergency supply is allowed, but under stricter conditions than a normal medicine."
+          },
+          {
+            "label": "No, Controlled Drugs can never be given as an emergency supply",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "Not quite — CDs can be emergency-supplied, just under extra conditions."
+          },
+          {
+            "label": "Yes, with no extra conditions beyond any other emergency supply",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "There are specific extra conditions for CDs — it isn't treated the same as a non-CD emergency supply."
+          }
+        ]
+      },
+      "fix1": {
+        "text": "CD emergency supply is permitted, but only when several extra conditions are satisfied.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n2"
+          }
+        ]
+      },
+      "n2": {
+        "text": "Which of these must also be true before you can proceed?",
+        "choices": [
+          {
+            "label": "No more than 5 days' treatment (or the nearest minimum pack) can be supplied",
+            "correct": true,
+            "next": "n3",
+            "feedback": "Correct — the same 5-day cap applies to CD emergency supplies."
+          },
+          {
+            "label": "You must supply a full 30-day quantity",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "30 days is too much — the same 5-day limit applies here as for any emergency supply."
+          },
+          {
+            "label": "The carer must pay a deposit",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "There's no deposit requirement — the relevant limit is the 5-day quantity cap."
+          }
+        ]
+      },
+      "fix2": {
+        "text": "The same 5-day treatment cap (or nearest minimum pack) applies here as with any emergency supply.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n3"
+          }
+        ]
+      },
+      "n3": {
+        "text": "This is a patient-request emergency supply (the carer is asking, not the GP). What extra condition applies ONLY to patient-request CD emergency supplies?",
+        "choices": [
+          {
+            "label": "No other patient-request emergency supply of that CD can have been made since the patient's last proper prescription",
+            "correct": true,
+            "next": "end",
+            "feedback": "Correct — this stops repeated emergency supplies quietly substituting for a proper prescription."
+          },
+          {
+            "label": "The carer must be a blood relative of the patient",
+            "correct": false,
+            "next": "fix3",
+            "feedback": "There's no relationship requirement — the condition is about not repeating patient-request CD supplies."
+          },
+          {
+            "label": "The pharmacy must inform An Garda Síochána",
+            "correct": false,
+            "next": "fix3",
+            "feedback": "No Garda notification is required for this — it's a professional record-keeping condition, not a reporting one."
+          }
+        ]
+      },
+      "fix3": {
+        "text": "For a patient-request CD emergency supply, no other patient-request supply of that same CD can have been made since the patient's last proper prescription.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "end"
+          }
+        ]
+      },
+      "end": {
+        "text": "Handled correctly. With the conditions satisfied, you can supply up to 5 days of the morphine solution, labelled 'Emergency Supply', with the CD Register updated and the circumstances recorded.",
+        "end": true
+      }
+    }
+  },
+  {
+    "id": "scn-cd-epilepsy",
+    "type": "scenario",
+    "title": "An Urgent Request for an Epilepsy Medicine",
+    "intro": "A mother rushes in — her son's seizures have become more frequent, and his neurologist has told her by phone to get clobazam urgently. She has no prescription and can't reach anyone to write one today.",
+    "start": "n1",
+    "nodes": {
+      "n1": {
+        "text": "Clobazam is a Schedule 4 Part 1 CD. Does the usual CD emergency-supply 'extra conditions' rule apply here?",
+        "choices": [
+          {
+            "label": "No — clobazam is one of six anti-epileptic CDs exempt from those extra conditions when supplied for epilepsy",
+            "correct": true,
+            "next": "n2",
+            "feedback": "Correct — there's a specific epilepsy exception for six named CDs."
+          },
+          {
+            "label": "Yes, all the usual extra CD conditions must be met first",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "Not for this specific situation — there's a named epilepsy exception that applies here."
+          },
+          {
+            "label": "No supply is possible without a prescription, exception or not",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "A supply IS possible here — that's exactly what the epilepsy exception is for."
+          }
+        ]
+      },
+      "fix1": {
+        "text": "There's a specific epilepsy exception: six named anti-epileptic CDs (including clobazam) can be emergency-supplied for epilepsy without meeting the usual extra CD conditions.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n2"
+          }
+        ]
+      },
+      "n2": {
+        "text": "Which of these is NOT one of the six drugs covered by this specific exception?",
+        "choices": [
+          {
+            "label": "Diazepam",
+            "correct": true,
+            "next": "end",
+            "feedback": "Correct — diazepam isn't on this specific exception list, even though it's a closely related CD."
+          },
+          {
+            "label": "Midazolam",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "Midazolam IS on the exception list."
+          },
+          {
+            "label": "Clonazepam",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "Clonazepam IS on the exception list."
+          }
+        ]
+      },
+      "fix2": {
+        "text": "The six are: methylphenobarbitone, phenobarbitone, phenobarbitone sodium, midazolam, clobazam and clonazepam. Diazepam is not among them.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "end"
+          }
+        ]
+      },
+      "end": {
+        "text": "Handled correctly. Because clobazam is on the epilepsy exception list, you can proceed with the emergency supply without needing to satisfy the general extra CD conditions — document it fully regardless.",
+        "end": true
+      }
+    }
+  },
+  {
+    "id": "scn-uk-prescription",
+    "type": "scenario",
+    "title": "A Prescription from Across the Water",
+    "intro": "A patient hands you a paper prescription from her GP in Belfast for her usual blood pressure tablets — she's just moved to Donegal.",
+    "start": "n1",
+    "nodes": {
+      "n1": {
+        "text": "Is a prescription from a UK-registered doctor valid in Ireland?",
+        "choices": [
+          {
+            "label": "Yes — recognised in Ireland since 1 January 2021, under the same requirements as an EU/EEA prescription",
+            "correct": true,
+            "next": "n2",
+            "feedback": "Correct."
+          },
+          {
+            "label": "No, UK prescriptions have never been valid in Ireland",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "They are recognised — since 1 January 2021."
+          },
+          {
+            "label": "Only if countersigned by an Irish GP",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "No countersignature is needed — it's valid in its own right, provided it meets the standard requirements."
+          }
+        ]
+      },
+      "fix1": {
+        "text": "UK prescriptions have been recognised in Ireland since 1 January 2021, under the same requirements as an EU/EEA prescription.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n2"
+          }
+        ]
+      },
+      "n2": {
+        "text": "The same patient also asks you to dispense her son's ADHD medication — a Schedule 2 CD — from a UK prescription her GP emailed as a PDF. Can you?",
+        "choices": [
+          {
+            "label": "No — Schedule 2 CDs can't be dispensed from a UK prescription, and a PDF/scan isn't valid as an original anyway",
+            "correct": true,
+            "next": "end",
+            "feedback": "Correct — for two separate reasons: the CD restriction, and the original-document requirement."
+          },
+          {
+            "label": "Yes, as long as it's a clear scan",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "A scan is never valid — and the CD restriction rules this out regardless."
+          },
+          {
+            "label": "Yes, because it's still a registered UK prescriber",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "Being a registered UK prescriber doesn't override the CD restriction or the original-document rule."
+          }
+        ]
+      },
+      "fix2": {
+        "text": "Two separate problems here: Schedule 2, 3 and 4 Part 1 CDs can't be dispensed from UK prescriptions at all, and a faxed or scanned copy is never valid — only the original.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "end"
+          }
+        ]
+      },
+      "end": {
+        "text": "Handled correctly. Dispense the blood pressure medication as a standard UK-recognised prescription; the CD request needs a different route — likely a new Irish prescription, or a conversation with the GP about emergency supply.",
+        "end": true
+      }
+    }
+  },
+  {
+    "id": "scn-healthmail-fax",
+    "type": "scenario",
+    "title": "Which Prescriptions Are Actually Valid?",
+    "intro": "Mid-morning rush: one prescription arrives through Healthmail, another arrives by fax from a GP who says the original is in the post.",
+    "start": "n1",
+    "nodes": {
+      "n1": {
+        "text": "For the Healthmail prescription, what must you do before dispensing?",
+        "choices": [
+          {
+            "label": "Print a copy — the Healthmail prescription is already legally valid",
+            "correct": true,
+            "next": "n2",
+            "feedback": "Correct — Healthmail prescriptions are valid on arrival."
+          },
+          {
+            "label": "Wait for the original paper copy to arrive by post",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "No need — the printed Healthmail copy IS the valid document."
+          },
+          {
+            "label": "Treat it as needing an emergency supply authorisation first",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "No emergency supply is needed — Healthmail prescriptions are already legally valid."
+          }
+        ]
+      },
+      "fix1": {
+        "text": "A Healthmail prescription is legally valid as soon as it arrives — print a copy and you can dispense straight away.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n2"
+          }
+        ]
+      },
+      "n2": {
+        "text": "For the faxed prescription, what's its legal status?",
+        "choices": [
+          {
+            "label": "Not valid on its own — it can only support an emergency supply at the prescriber's request, with the original due within 72 hours",
+            "correct": true,
+            "next": "end",
+            "feedback": "Correct."
+          },
+          {
+            "label": "Just as valid as the Healthmail one",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "A fax is not valid on its own — it only supports a prescriber-request emergency supply."
+          },
+          {
+            "label": "Valid only for GSL medicines",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "That's not the relevant distinction here — the issue is that a fax isn't a valid prescription on its own, regardless of medicine type."
+          }
+        ]
+      },
+      "fix2": {
+        "text": "A fax (or personal/commercial email) is not a valid prescription on its own — it can support a prescriber-request emergency supply, but the original must still arrive within 72 hours.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "end"
+          }
+        ]
+      },
+      "end": {
+        "text": "Handled correctly. Dispense directly from the printed Healthmail copy; treat the faxed one as an emergency supply at the prescriber's request, and track that 72-hour window.",
+        "end": true
+      }
+    }
+  },
+  {
+    "id": "scn-org-supply",
+    "type": "scenario",
+    "title": "A Request from the Local GAA Club",
+    "intro": "The secretary of the local GAA club calls in — they want to hold adrenaline auto-injectors and a salbutamol inhaler at the grounds for emergencies, and asks what they need to do.",
+    "start": "n1",
+    "nodes": {
+      "n1": {
+        "text": "Before you can supply anything, what must you check first?",
+        "choices": [
+          {
+            "label": "That the club appears on the HPRA's list of Listed Organisations, along with its accountable person and the medicines requested",
+            "correct": true,
+            "next": "n2",
+            "feedback": "Correct."
+          },
+          {
+            "label": "Nothing — any club can be supplied on request",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "Not quite — the organisation must be checked against the HPRA's list first."
+          },
+          {
+            "label": "That the club has public liability insurance",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "Insurance isn't the relevant check here — it's the HPRA's list of Listed Organisations."
+          }
+        ]
+      },
+      "fix1": {
+        "text": "You must check the HPRA's list of Listed Organisations first — it needs to show the organisation, its accountable person, and each medicine being requested.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n2"
+          }
+        ]
+      },
+      "n2": {
+        "text": "The club checks out on the HPRA list. What else do you need from them before supplying?",
+        "choices": [
+          {
+            "label": "A signed order from the organisation's 'accountable person', stating the org's details, storage address, product and quantity",
+            "correct": true,
+            "next": "n3",
+            "feedback": "Correct."
+          },
+          {
+            "label": "A verbal request is enough once they're on the HPRA list",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "A verbal request isn't enough — a signed order from the accountable person is required."
+          },
+          {
+            "label": "A letter from the GAA's national governing body",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "That's not what's required — it's a signed order from the club's own accountable person."
+          }
+        ]
+      },
+      "fix2": {
+        "text": "You need a signed order from the organisation's 'accountable person', stating the organisation's name and address, the accountable person's name, the storage address, the product and the quantity.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n3"
+          }
+        ]
+      },
+      "n3": {
+        "text": "How long must you keep the signed order and your supply register for?",
+        "choices": [
+          {
+            "label": "2 years, including batch number and expiry",
+            "correct": true,
+            "next": "end",
+            "feedback": "Correct."
+          },
+          {
+            "label": "6 months",
+            "correct": false,
+            "next": "fix3",
+            "feedback": "That's too short — the requirement is 2 years."
+          },
+          {
+            "label": "Indefinitely",
+            "correct": false,
+            "next": "fix3",
+            "feedback": "Not indefinitely — 2 years is the requirement."
+          }
+        ]
+      },
+      "fix3": {
+        "text": "Records — the signed order and a supply register with batch number and expiry — must be kept for 2 years.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "end"
+          }
+        ]
+      },
+      "end": {
+        "text": "Handled correctly. Once the HPRA listing, signed order and record-keeping are all in place, you can supply the auto-injectors and inhaler to the club.",
+        "end": true
+      }
+    }
+  },
+  {
+    "id": "scn-isotretinoin",
+    "type": "scenario",
+    "title": "An Overdue Prescription",
+    "intro": "A prescription for oral Isotretinoin lands on the counter — dated 9 days ago, for a 25-year-old patient.",
+    "start": "n1",
+    "nodes": {
+      "n1": {
+        "text": "What's the key legal time limit for dispensing this prescription?",
+        "choices": [
+          {
+            "label": "It must not be dispensed later than 7 days after the prescription date",
+            "correct": true,
+            "next": "n2",
+            "feedback": "Correct."
+          },
+          {
+            "label": "It can be dispensed any time within the standard 6-month validity",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "Not for Isotretinoin — it has its own much shorter 7-day window."
+          },
+          {
+            "label": "There's no special time limit for Isotretinoin",
+            "correct": false,
+            "next": "fix1",
+            "feedback": "There is — a strict 7-day dispensing window from the prescription date."
+          }
+        ]
+      },
+      "fix1": {
+        "text": "Oral Isotretinoin has a strict rule: it must not be dispensed later than 7 days after the date on the prescription.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n2"
+          }
+        ]
+      },
+      "n2": {
+        "text": "This prescription is 9 days old. What should you do?",
+        "choices": [
+          {
+            "label": "Decline to dispense it — the 7-day window has passed, so the patient needs a new prescription",
+            "correct": true,
+            "next": "n3",
+            "feedback": "Correct — the rule is absolute, however inconvenient."
+          },
+          {
+            "label": "Dispense it anyway since the patient needs the medicine",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "The 7-day rule doesn't bend for convenience — a new prescription is needed."
+          },
+          {
+            "label": "Dispense half the quantity as a compromise",
+            "correct": false,
+            "next": "fix2",
+            "feedback": "Partial dispensing doesn't solve this — the prescription itself is now outside its dispensing window."
+          }
+        ]
+      },
+      "fix2": {
+        "text": "The 7-day rule is absolute — once it's passed, a new prescription is needed, however inconvenient that is for the patient.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "n3"
+          }
+        ]
+      },
+      "n3": {
+        "text": "If this had been dispensed in time, what's the maximum quantity you could supply?",
+        "choices": [
+          {
+            "label": "30 days' quantity",
+            "correct": true,
+            "next": "end",
+            "feedback": "Correct."
+          },
+          {
+            "label": "90 days' quantity",
+            "correct": false,
+            "next": "fix3",
+            "feedback": "That's too much — the limit is 30 days."
+          },
+          {
+            "label": "Whatever quantity is written, no matter how large",
+            "correct": false,
+            "next": "fix3",
+            "feedback": "There IS a cap — 30 days, regardless of what's written."
+          }
+        ]
+      },
+      "fix3": {
+        "text": "The quantity supplied must not exceed 30 days, even within the 7-day dispensing window.",
+        "choices": [
+          {
+            "label": "Continue",
+            "next": "end"
+          }
+        ]
+      },
+      "end": {
+        "text": "Handled correctly. This prescription can't be dispensed as-is — refer the patient back for a new one, dated within the last 7 days.",
+        "end": true
+      }
+    }
+  }
+]
