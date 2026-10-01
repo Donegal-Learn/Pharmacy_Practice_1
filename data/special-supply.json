@@ -1,0 +1,93 @@
+[
+  {
+    "id": "sp-01",
+    "type": "mc",
+    "question": "For an emergency supply at a PATIENT's request, what is the general maximum quantity?",
+    "options": ["1 day's supply", "5 days' treatment", "14 days' treatment", "30 days' treatment"],
+    "answer": "5 days' treatment",
+    "explanation": "Generally no more than a 5-day supply, with exceptions: smallest pack of inhalers/creams, full course of liquid antibiotics, or a full cycle of oral contraceptives."
+  },
+  {
+    "id": "sp-02",
+    "type": "typed",
+    "question": "What must the label say for any emergency supply?",
+    "answer": "Emergency Supply",
+    "explanation": "The label must clearly state 'Emergency Supply' so anyone handling the medicine afterwards knows the circumstances of dispensing."
+  },
+  {
+    "id": "sp-03",
+    "type": "mc",
+    "question": "For an emergency supply at a PRESCRIBER's request, within how many hours must a valid prescription follow?",
+    "options": ["24 hours", "48 hours", "72 hours", "7 days"],
+    "answer": "72 hours",
+    "explanation": "The prescriber undertakes to provide a valid prescription within 72 hours of requesting the emergency supply."
+  },
+  {
+    "id": "sp-04",
+    "type": "mc",
+    "question": "Prescriptions from registered prescribers in other EU/EEA states are:",
+    "options": ["Never valid in Ireland", "Legally valid in Ireland, with restrictions on Schedule 2/3 CDs", "Only valid for GSL medicines", "Valid only if countersigned by an Irish GP"],
+    "answer": "Legally valid in Ireland, with restrictions on Schedule 2/3 CDs",
+    "explanation": "EU/EEA prescriptions are legally valid provided they contain the required details. However, Schedule 2 and Schedule 3 Controlled Drugs cannot be dispensed from them (Schedule 4 and 5 CDs can)."
+  },
+  {
+    "id": "sp-05",
+    "type": "typed",
+    "question": "What condition is oral Isotretinoin used to treat, and what two special dispensing limits apply?",
+    "answer": "severe acne; must be dispensed within 7 days of the prescription date, and quantity must not exceed 30 days",
+    "explanation": "Isotretinoin (severe acne treatment) has strict rules for women of childbearing potential: dispense no later than 7 days after the prescription date, and supply no more than a 30-day quantity."
+  },
+  {
+    "id": "sp-06",
+    "type": "mc",
+    "question": "What does an inverted black triangle (\u25bc) on a medicine indicate?",
+    "options": ["The medicine is discontinued", "It is subject to additional monitoring \u2014 report all suspected ADRs to the HPRA", "It is a Controlled Drug", "It requires refrigeration"],
+    "answer": "It is subject to additional monitoring \u2014 report all suspected ADRs to the HPRA",
+    "explanation": "The Black Triangle Scheme flags medicines needing extra adverse drug reaction (ADR) reporting \u2014 including those with a new active substance not authorised in the EU before 1 Jan 2011, all biological medicines (including biosimilars) authorised after that date, medicines needing a post-authorisation safety study, and medicines with conditional or exceptional-circumstances authorisation. It usually applies for about 5 years, sometimes longer."
+  },
+  {
+    "id": "sp-07",
+    "type": "typed",
+    "question": "Name three emergency medicines pharmacists can supply to a registered organisation on a signed requisition.",
+    "answer": "adrenaline auto-injector, glucagon, GTN spray, naloxone, salbutamol inhaler",
+    "explanation": "The full list: adrenaline auto-injectors (150 and 300 mcg), glucagon, GTN spray, naloxone (injection and nasal spray), and salbutamol inhaler. The signed order from the organisation's 'accountable person' must state the organisation's name/address, the accountable person's name, the storage address, the product, and the quantity \u2014 and must be kept, along with a supply register (batch number and expiry included), for 2 years."
+  },
+  {
+    "id": "sp-07b",
+    "type": "mc",
+    "question": "Before supplying emergency medicines to an organisation, what must the pharmacist check?",
+    "options": ["Nothing beyond the signed order", "That the organisation appears on the HPRA's list of Listed Organisations, along with the accountable person and medicines requested", "The organisation's annual accounts", "A letter of recommendation from the HSE"],
+    "answer": "That the organisation appears on the HPRA's list of Listed Organisations, along with the accountable person and medicines requested",
+    "explanation": "The pharmacist must check the HPRA's list of Listed Organisations before supplying \u2014 it must show the organisation itself, its accountable person, and each medicine being requested."
+  },
+  {
+    "id": "sp-08",
+    "type": "mc",
+    "question": "If a pharmacist sees a nurse/midwife prescription that seems outside their typical scope of practice, what should they do?",
+    "options": ["Refuse to dispense automatically", "Verify the prescription's validity, e.g. by contacting the prescriber or their collaborating doctor", "Dispense it anyway without question", "Contact the patient's family"],
+    "answer": "Verify the prescription's validity, e.g. by contacting the prescriber or their collaborating doctor",
+    "explanation": "The pharmacist has a professional obligation to check validity rather than automatically refuse or automatically dispense \u2014 including checking the prescriber's NMBI registration. Nurse and midwife prescribing is governed by their local health service provider's own prescribing policies, procedures, protocols and guidelines."
+  },
+  {
+    "id": "sp-09",
+    "type": "mc",
+    "question": "Since 1 January 2021, prescriptions from UK doctors, dentists, and nurse/midwife prescribers are:",
+    "options": ["Never valid in Ireland", "Recognised in Ireland, under the same requirements as an EU/EEA prescription, with some restrictions", "Valid only for GSL medicines", "Valid only if issued through an online UK service"],
+    "answer": "Recognised in Ireland, under the same requirements as an EU/EEA prescription, with some restrictions",
+    "explanation": "UK prescriptions must meet the same legal requirements as an EEA prescription, and the product must be licensed in Ireland. Schedule 2, 3 and 4 Part 1 Controlled Drugs cannot be dispensed from a UK prescription."
+  },
+  {
+    "id": "sp-10",
+    "type": "typed",
+    "question": "Name two situations where a UK prescription CANNOT be dispensed, even though UK prescriptions are generally recognised in Ireland.",
+    "answer": "issued for mail-order or online supply, or a fax/scanned copy rather than the original",
+    "explanation": "UK online-doctor prescriptions issued for mail-order/online supply cannot be dispensed, and neither can a fax or scanned copy \u2014 electronic UK prescriptions aren't supported under Irish law, only the original script."
+  },
+  {
+    "id": "sp-11",
+    "type": "typed",
+    "question": "A prescriber sends a prescription via Healthmail. Is an emergency supply needed before you can dispense?",
+    "answer": "No \u2014 a Healthmail prescription is already legally valid, so no emergency supply is required",
+    "explanation": "Healthmail prescriptions are legally valid on arrival. By contrast, a prescription sent by fax or by personal/commercial email is NOT valid \u2014 it can only support an emergency supply at a prescriber's request, with the original still required within 72 hours."
+  }
+]
